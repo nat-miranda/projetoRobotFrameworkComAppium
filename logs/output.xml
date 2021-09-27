@@ -1,12 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<robot generator="Robot 4.1.1 (Python 3.9.7 on win32)" generated="20210926 22:23:26.799" rpa="false" schemaversion="2">
-<suite id="s1" name="Nav" source="c:\qaninja\twp\nav.robot">
-<test id="s1-t1" name="Deve acessar a tela Dialogs">
-<kw name="Open Session" type="SETUP">
+<robot generator="Robot 4.1.1 (Python 3.9.7 on win32)" generated="20210927 02:30:46.171" rpa="false" schemaversion="2">
+<suite id="s1" name="Tests" source="c:\qaninja\twp\tests">
+<suite id="s1-s1" name="Buttons" source="c:\qaninja\twp\tests\buttons.robot">
+<test id="s1-s1-t1" name="Deve realizar um clique simples">
+<kw name="Open Session" library="base" type="SETUP">
 <kw name="Set Appium Timeout" library="AppiumLibrary">
 <arg>10</arg>
 <doc>Sets the timeout in seconds used by various keywords.</doc>
-<status status="PASS" starttime="20210926 22:23:33.392" endtime="20210926 22:23:33.392"/>
+<status status="PASS" starttime="20210927 02:30:46.433" endtime="20210927 02:30:46.433"/>
 </kw>
 <kw name="Open Application" library="AppiumLibrary">
 <arg>http://localhost:4723/wd/hub</arg>
@@ -20,274 +21,44 @@ Please check https://github.com/appium/appium/blob/master/docs/en/writing-runnin
 | *Option*            | *Man.* | *Description*     |
 | remote_url          | Yes    | Appium server url |
 | alias               | no     | alias             |</doc>
-<status status="PASS" starttime="20210926 22:23:33.392" endtime="20210926 22:24:05.250"/>
+<status status="PASS" starttime="20210927 02:30:46.434" endtime="20210927 02:31:01.889"/>
 </kw>
-<status status="PASS" starttime="20210926 22:23:33.391" endtime="20210926 22:24:05.251"/>
+<kw name="Get Started" library="helpers">
+<kw name=" Wait Until Page Contains" library="helpers">
+<arg>${START}</arg>
+<msg timestamp="20210927 02:31:01.889" level="FAIL">Keyword with same name defined multiple times.</msg>
+<status status="FAIL" starttime="20210927 02:31:01.889" endtime="20210927 02:31:01.889"/>
 </kw>
-<kw name="Get Started">
-<kw name="Wait Until Page Contains" library="AppiumLibrary">
-<arg>COMEÇAR</arg>
-<doc>Waits until `text` appears on current page.</doc>
-<status status="PASS" starttime="20210926 22:24:05.252" endtime="20210926 22:24:08.728"/>
+<kw name=" Click Text" library="helpers">
+<arg>${START}</arg>
+<status status="NOT RUN" starttime="20210927 02:31:01.890" endtime="20210927 02:31:01.890"/>
 </kw>
-<kw name="Click Text" library="AppiumLibrary">
-<arg>COMEÇAR</arg>
-<doc>Click text identified by ``text``.</doc>
-<status status="PASS" starttime="20210926 22:24:08.728" endtime="20210926 22:24:09.335"/>
+<status status="FAIL" starttime="20210927 02:31:01.889" endtime="20210927 02:31:01.890"/>
 </kw>
-<status status="PASS" starttime="20210926 22:24:05.251" endtime="20210926 22:24:09.336"/>
+<status status="FAIL" starttime="20210927 02:30:46.433" endtime="20210927 02:31:01.890"/>
 </kw>
-<kw name="Open Nav">
-<kw name="Wait Until Element Is Visible" library="AppiumLibrary">
-<arg>xpath=//android.widget.ImageButton[@content-desc="Open navigation drawer"]</arg>
-<doc>Waits until element specified with `locator` is visible.</doc>
-<status status="PASS" starttime="20210926 22:24:09.337" endtime="20210926 22:24:10.634"/>
-</kw>
-<kw name="Click Element" library="AppiumLibrary">
-<arg>xpath=//android.widget.ImageButton[@content-desc="Open navigation drawer"]</arg>
-<doc>Click element identified by `locator`.</doc>
-<msg timestamp="20210926 22:24:10.636" level="INFO">Clicking element 'xpath=//android.widget.ImageButton[@content-desc="Open navigation drawer"]'.</msg>
-<status status="PASS" starttime="20210926 22:24:10.635" endtime="20210926 22:24:10.741"/>
-</kw>
-<kw name="Wait Until Element Is Visible" library="AppiumLibrary">
-<arg>id=io.qaninja.android.twp:id/navView</arg>
-<doc>Waits until element specified with `locator` is visible.</doc>
-<status status="PASS" starttime="20210926 22:24:10.741" endtime="20210926 22:24:11.710"/>
-</kw>
-<status status="PASS" starttime="20210926 22:24:09.336" endtime="20210926 22:24:11.710"/>
-</kw>
-<kw name="Click Text" library="AppiumLibrary">
-<arg>DIALOGS</arg>
-<doc>Click text identified by ``text``.</doc>
-<status status="PASS" starttime="20210926 22:24:11.711" endtime="20210926 22:24:11.878"/>
-</kw>
-<kw name="Wait Until Element Is Visible" library="AppiumLibrary">
-<arg>id=io.qaninja.android.twp:id/toolbarTitle</arg>
-<doc>Waits until element specified with `locator` is visible.</doc>
-<status status="PASS" starttime="20210926 22:24:11.879" endtime="20210926 22:24:12.822"/>
-</kw>
-<kw name="Element Text Should Be" library="AppiumLibrary">
-<arg>id=io.qaninja.android.twp:id/toolbarTitle</arg>
-<arg>DIALOGS</arg>
-<doc>Verifies element identified by ``locator`` exactly contains text ``expected``.</doc>
-<msg timestamp="20210926 22:24:12.824" level="INFO">Verifying element 'id=io.qaninja.android.twp:id/toolbarTitle' contains exactly text 'DIALOGS'.</msg>
-<status status="PASS" starttime="20210926 22:24:12.823" endtime="20210926 22:24:12.875"/>
-</kw>
-<kw name="Close Session" type="TEARDOWN">
-<kw name="Close Application" library="AppiumLibrary">
-<doc>Closes the current application and also close webdriver session.</doc>
-<status status="PASS" starttime="20210926 22:24:12.876" endtime="20210926 22:24:13.755"/>
-</kw>
-<status status="PASS" starttime="20210926 22:24:12.876" endtime="20210926 22:24:13.755"/>
-</kw>
-<status status="PASS" starttime="20210926 22:23:33.391" endtime="20210926 22:24:13.756"/>
-</test>
-<test id="s1-t2" name="Deve acessar a tela de formulários">
-<kw name="Open Session" type="SETUP">
-<kw name="Set Appium Timeout" library="AppiumLibrary">
-<arg>10</arg>
-<doc>Sets the timeout in seconds used by various keywords.</doc>
-<status status="PASS" starttime="20210926 22:24:13.764" endtime="20210926 22:24:13.764"/>
-</kw>
-<kw name="Open Application" library="AppiumLibrary">
-<arg>http://localhost:4723/wd/hub</arg>
-<arg>automationName=UiAutomator2</arg>
-<arg>platformName=Android</arg>
-<arg>deviceName=Android Emulator</arg>
-<arg>app=${EXECDIR}/app/twp.apk</arg>
-<doc>Opens a new application to given Appium server.
-Capabilities of appium server, Android and iOS,
-Please check https://github.com/appium/appium/blob/master/docs/en/writing-running-appium/server-args.md
-| *Option*            | *Man.* | *Description*     |
-| remote_url          | Yes    | Appium server url |
-| alias               | no     | alias             |</doc>
-<status status="PASS" starttime="20210926 22:24:13.765" endtime="20210926 22:24:30.546"/>
-</kw>
-<status status="PASS" starttime="20210926 22:24:13.764" endtime="20210926 22:24:30.546"/>
-</kw>
-<kw name="Get Started">
-<kw name="Wait Until Page Contains" library="AppiumLibrary">
-<arg>COMEÇAR</arg>
-<doc>Waits until `text` appears on current page.</doc>
-<status status="PASS" starttime="20210926 22:24:30.548" endtime="20210926 22:24:34.899"/>
-</kw>
-<kw name="Click Text" library="AppiumLibrary">
-<arg>COMEÇAR</arg>
-<doc>Click text identified by ``text``.</doc>
-<status status="PASS" starttime="20210926 22:24:34.899" endtime="20210926 22:24:35.121"/>
-</kw>
-<status status="PASS" starttime="20210926 22:24:30.547" endtime="20210926 22:24:35.121"/>
-</kw>
-<kw name="Open Nav">
-<kw name="Wait Until Element Is Visible" library="AppiumLibrary">
-<arg>xpath=//android.widget.ImageButton[@content-desc="Open navigation drawer"]</arg>
-<doc>Waits until element specified with `locator` is visible.</doc>
-<status status="PASS" starttime="20210926 22:24:35.123" endtime="20210926 22:24:36.399"/>
-</kw>
-<kw name="Click Element" library="AppiumLibrary">
-<arg>xpath=//android.widget.ImageButton[@content-desc="Open navigation drawer"]</arg>
-<doc>Click element identified by `locator`.</doc>
-<msg timestamp="20210926 22:24:36.401" level="INFO">Clicking element 'xpath=//android.widget.ImageButton[@content-desc="Open navigation drawer"]'.</msg>
-<status status="PASS" starttime="20210926 22:24:36.399" endtime="20210926 22:24:36.529"/>
-</kw>
-<kw name="Wait Until Element Is Visible" library="AppiumLibrary">
-<arg>id=io.qaninja.android.twp:id/navView</arg>
-<doc>Waits until element specified with `locator` is visible.</doc>
-<status status="PASS" starttime="20210926 22:24:36.529" endtime="20210926 22:24:37.489"/>
-</kw>
-<status status="PASS" starttime="20210926 22:24:35.122" endtime="20210926 22:24:37.489"/>
-</kw>
-<kw name="Wait Until Element Is Visible" library="AppiumLibrary">
-<arg>xpath=//android.widget.ImageButton[@content-desc="Open navigation drawer"]</arg>
-<doc>Waits until element specified with `locator` is visible.</doc>
-<msg timestamp="20210926 22:24:51.357" level="INFO">&lt;?xml version='1.0' encoding='UTF-8' standalone='yes' ?&gt;
-&lt;hierarchy index="0" class="hierarchy" rotation="0" width="1080" height="1794"&gt;
-  &lt;android.widget.FrameLayout index="0" package="io.qaninja.android.twp" class="android.widget.FrameLayout" text="" checkable="false" checked="false" clickable="false" enabled="true" focusable="false" focused="false" long-clickable="false" password="false" scrollable="false" selected="false" bounds="[0,0][1080,1794]" displayed="true"&gt;
-    &lt;android.widget.LinearLayout index="0" package="io.qaninja.android.twp" class="android.widget.LinearLayout" text="" checkable="false" checked="false" clickable="false" enabled="true" focusable="false" focused="false" long-clickable="false" password="false" scrollable="false" selected="false" bounds="[0,0][1080,1794]" displayed="true"&gt;
-      &lt;android.widget.FrameLayout index="0" package="io.qaninja.android.twp" class="android.widget.FrameLayout" text="" checkable="false" checked="false" clickable="false" enabled="true" focusable="false" focused="false" long-clickable="false" password="false" scrollable="false" selected="false" bounds="[0,0][1080,1794]" displayed="true"&gt;
-        &lt;android.widget.LinearLayout index="0" package="io.qaninja.android.twp" class="android.widget.LinearLayout" text="" resource-id="io.qaninja.android.twp:id/action_bar_root" checkable="false" checked="false" clickable="false" enabled="true" focusable="false" focused="false" long-clickable="false" password="false" scrollable="false" selected="false" bounds="[0,0][1080,1794]" displayed="true"&gt;
-          &lt;android.widget.FrameLayout index="0" package="io.qaninja.android.twp" class="android.widget.FrameLayout" text="" resource-id="android:id/content" checkable="false" checked="false" clickable="false" enabled="true" focusable="false" focused="false" long-clickable="false" password="false" scrollable="false" selected="false" bounds="[0,0][1080,1794]" displayed="true"&gt;
-            &lt;androidx.drawerlayout.widget.DrawerLayout index="0" package="io.qaninja.android.twp" class="androidx.drawerlayout.widget.DrawerLayout" text="" resource-id="io.qaninja.android.twp:id/drawerLayout" checkable="false" checked="false" clickable="false" enabled="true" focusable="false" focused="false" long-clickable="false" password="false" scrollable="false" selected="false" bounds="[0,0][1080,1794]" displayed="true"&gt;
-              &lt;android.widget.FrameLayout index="0" package="io.qaninja.android.twp" class="android.widget.FrameLayout" text="" resource-id="io.qaninja.android.twp:id/navView" checkable="false" checked="false" clickable="false" enabled="true" focusable="false" focused="false" long-clickable="false" password="false" scrollable="false" selected="false" bounds="[0,0][735,1794]" displayed="true"&gt;
-                &lt;androidx.recyclerview.widget.RecyclerView index="0" package="io.qaninja.android.twp" class="androidx.recyclerview.widget.RecyclerView" text="" resource-id="io.qaninja.android.twp:id/rvNavigation" checkable="false" checked="false" clickable="false" enabled="true" focusable="true" focused="false" long-clickable="false" password="false" scrollable="true" selected="false" bounds="[0,0][735,1794]" displayed="true"&gt;
-                  &lt;android.view.ViewGroup index="0" package="io.qaninja.android.twp" class="android.view.ViewGroup" text="" checkable="false" checked="false" clickable="false" enabled="true" focusable="false" focused="false" long-clickable="false" password="false" scrollable="false" selected="false" bounds="[0,0][735,609]" displayed="true"&gt;
-                    &lt;android.widget.TextView index="0" package="io.qaninja.android.twp" class="android.widget.TextView" text="Training Wheels" resource-id="io.qaninja.android.twp:id/tvNavTitle" checkable="false" checked="false" clickable="false" enabled="true" focusable="false" focused="false" long-clickable="false" password="false" scrollable="false" selected="false" bounds="[42,84][735,175]" displayed="true" /&gt;
-                    &lt;android.widget.TextView index="1" package="io.qaninja.android.twp" class="android.widget.TextView" text="Mobile" resource-id="io.qaninja.android.twp:id/tvNavSubtitle" checkable="false" checked="false" clickable="false" enabled="true" focusable="false" focused="false" long-clickable="false" password="false" scrollable="false" selected="false" bounds="[42,196][735,253]" displayed="true" /&gt;
-                    &lt;android.widget.Button index="2" package="io.qaninja.android.twp" class="android.widget.Button" text="QA NINJA" resource-id="io.qaninja.android.twp:id/btnBuyNowNavigation" checkable="false" checked="false" clickable="true" enabled="true" focusable="true" focused="false" long-clickable="false" password="false" scrollable="false" selected="false" bounds="[42,347][362,494]" displayed="true" /&gt;
-                    &lt;android.widget.TextView index="3" package="io.qaninja.android.twp" class="android.widget.TextView" text="Cursos Online" resource-id="io.qaninja.android.twp:id/tvDocs" checkable="false" checked="false" clickable="true" enabled="true" focusable="true" focused="false" long-clickable="false" password="false" scrollable="false" selected="false" bounds="[404,347][601,494]" displayed="true" /&gt;
-                  &lt;/android.view.ViewGroup&gt;
-                  &lt;android.widget.FrameLayout index="1" package="io.qaninja.android.twp" class="android.widget.FrameLayout" text="" checkable="false" checked="false" clickable="true" enabled="true" focusable="true" focused="false" long-clickable="false" password="false" scrollable="false" selected="false" bounds="[0,609][735,819]" displayed="true"&gt;
-                    &lt;android.view.ViewGroup index="0" package="io.qaninja.android.twp" class="android.view.ViewGroup" text="" checkable="false" checked="false" clickable="false" enabled="true" focusable="false" focused="false" long-clickable="false" password="false" scrollable="false" selected="false" bounds="[7,619][728,809]" displayed="true"&gt;
-                      &lt;android.widget.ImageView index="0" package="io.qaninja.android.twp" class="android.widget.ImageView" text="" content-desc="Icon" resource-id="io.qaninja.android.twp:id/ivItemIcon" checkable="false" checked="false" clickable="false" enabled="true" focusable="false" focused="false" long-clickable="false" password="false" scrollable="false" selected="false" bounds="[49,672][133,756]" displayed="true" /&gt;
-                      &lt;android.widget.TextView index="1" package="io.qaninja.android.twp" class="android.widget.TextView" text="AVENGERS" resource-id="io.qaninja.android.twp:id/tvItemTitle" checkable="false" checked="false" clickable="false" enabled="true" focusable="false" focused="false" long-clickable="false" password="false" scrollable="false" selected="false" bounds="[175,689][686,740]" displayed="true" /&gt;
-                    &lt;/android.view.ViewGroup&gt;
-                  &lt;/android.widget.FrameLayout&gt;
-                  &lt;android.widget.FrameLayout index="2" package="io.qaninja.android.twp" class="android.widget.FrameLayout" text="" checkable="false" checked="false" clickable="true" enabled="true" focusable="true" focused="false" long-clickable="false" password="false" scrollable="false" selected="false" bounds="[0,819][735,1029]" displayed="true"&gt;
-                    &lt;android.view.ViewGroup index="0" package="io.qaninja.android.twp" class="android.view.ViewGroup" text="" checkable="false" checked="false" clickable="false" enabled="true" focusable="false" focused="false" long-clickable="false" password="false" scrollable="false" selected="false" bounds="[7,829][728,1019]" displayed="true"&gt;
-                      &lt;android.widget.ImageView index="0" package="io.qaninja.android.twp" class="android.widget.ImageView" text="" content-desc="Icon" resource-id="io.qaninja.android.twp:id/ivItemIcon" checkable="false" checked="false" clickable="false" enabled="true" focusable="false" focused="false" long-clickable="false" password="false" scrollable="false" selected="false" bounds="[49,882][133,966]" displayed="true" /&gt;
-                      &lt;android.widget.TextView index="1" package="io.qaninja.android.twp" class="android.widget.TextView" text="FORMS" resource-id="io.qaninja.android.twp:id/tvItemTitle" checkable="false" checked="false" clickable="false" enabled="true" focusable="false" focused="false" long-clickable="false" password="false" scrollable="false" selected="false" bounds="[175,899][686,950]" displayed="true" /&gt;
-                    &lt;/android.view.ViewGroup&gt;
-                  &lt;/android.widget.FrameLayout&gt;
-                  &lt;android.widget.FrameLayout index="3" package="io.qaninja.android.twp" class="android.widget.FrameLayout" text="" checkable="false" checked="false" clickable="true" enabled="true" focusable="true" focused="false" long-clickable="false" password="false" scrollable="false" selected="false" bounds="[0,1029][735,1239]" displayed="true"&gt;
-                    &lt;android.view.ViewGroup index="0" package="io.qaninja.android.twp" class="android.view.ViewGroup" text="" checkable="false" checked="false" clickable="false" enabled="true" focusable="false" focused="false" long-clickable="false" password="false" scrollable="false" selected="false" bounds="[7,1039][728,1229]" displayed="true"&gt;
-                      &lt;android.widget.ImageView index="0" package="io.qaninja.android.twp" class="android.widget.ImageView" text="" content-desc="Icon" resource-id="io.qaninja.android.twp:id/ivItemIcon" checkable="false" checked="false" clickable="false" enabled="true" focusable="false" focused="false" long-clickable="false" password="false" scrollable="false" selected="false" bounds="[49,1092][133,1176]" displayed="true" /&gt;
-                      &lt;android.widget.TextView index="1" package="io.qaninja.android.twp" class="android.widget.TextView" text="DIALOGS" resource-id="io.qaninja.android.twp:id/tvItemTitle" checkable="false" checked="false" clickable="false" enabled="true" focusable="false" focused="false" long-clickable="false" password="false" scrollable="false" selected="false" bounds="[175,1109][686,1160]" displayed="true" /&gt;
-                    &lt;/android.view.ViewGroup&gt;
-                  &lt;/android.widget.FrameLayout&gt;
-                  &lt;android.widget.FrameLayout index="4" package="io.qaninja.android.twp" class="android.widget.FrameLayout" text="" checkable="false" checked="false" clickable="true" enabled="true" focusable="true" focused="false" long-clickable="false" password="false" scrollable="false" selected="false" bounds="[0,1239][735,1449]" displayed="true"&gt;
-                    &lt;android.view.ViewGroup index="0" package="io.qaninja.android.twp" class="android.view.ViewGroup" text="" checkable="false" checked="false" clickable="false" enabled="true" focusable="false" focused="false" long-clickable="false" password="false" scrollable="false" selected="false" bounds="[7,1249][728,1439]" displayed="true"&gt;
-                      &lt;android.widget.ImageView index="0" package="io.qaninja.android.twp" class="android.widget.ImageView" text="" content-desc="Icon" resource-id="io.qaninja.android.twp:id/ivItemIcon" checkable="false" checked="false" clickable="false" enabled="true" focusable="false" focused="false" long-clickable="false" password="false" scrollable="false" selected="false" bounds="[49,1302][133,1386]" displayed="true" /&gt;
-                      &lt;android.widget.TextView index="1" package="io.qaninja.android.twp" class="android.widget.TextView" text="SEEK BAR" resource-id="io.qaninja.android.twp:id/tvItemTitle" checkable="false" checked="false" clickable="false" enabled="true" focusable="false" focused="false" long-clickable="false" password="false" scrollable="false" selected="false" bounds="[175,1319][686,1370]" displayed="true" /&gt;
-                    &lt;/android.view.ViewGroup&gt;
-                  &lt;/android.widget.FrameLayout&gt;
-                  &lt;android.widget.FrameLayout index="5" package="io.qaninja.android.twp" class="android.widget.FrameLayout" text="" checkable="false" checked="false" clickable="true" enabled="true" focusable="true" focused="false" long-clickable="false" password="false" scrollable="false" selected="false" bounds="[0,1449][735,1659]" displayed="true"&gt;
-                    &lt;android.view.ViewGroup index="0" package="io.qaninja.android.twp" class="android.view.ViewGroup" text="" checkable="false" checked="false" clickable="false" enabled="true" focusable="false" focused="false" long-clickable="false" password="false" scrollable="false" selected="false" bounds="[7,1459][728,1649]" displayed="true"&gt;
-                      &lt;android.widget.ImageView index="0" package="io.qaninja.android.twp" class="android.widget.ImageView" text="" content-desc="Icon" resource-id="io.qaninja.android.twp:id/ivItemIcon" checkable="false" checked="false" clickable="false" enabled="true" focusable="false" focused="false" long-clickable="false" password="false" scrollable="false" selected="false" bounds="[49,1512][133,1596]" displayed="true" /&gt;
-                      &lt;android.widget.TextView index="1" package="io.qaninja.android.twp" class="android.widget.TextView" text="INPUTS" resource-id="io.qaninja.android.twp:id/tvItemTitle" checkable="false" checked="false" clickable="false" enabled="true" focusable="false" focused="false" long-clickable="false" password="false" scrollable="false" selected="false" bounds="[175,1529][686,1580]" displayed="true" /&gt;
-                    &lt;/android.view.ViewGroup&gt;
-                  &lt;/android.widget.FrameLayout&gt;
-                  &lt;android.widget.FrameLayout index="6" package="io.qaninja.android.twp" class="android.widget.FrameLayout" text="" checkable="false" checked="false" clickable="true" enabled="true" focusable="true" focused="false" long-clickable="false" password="false" scrollable="false" selected="false" bounds="[0,1659][735,1794]" displayed="true"&gt;
-                    &lt;android.view.ViewGroup index="0" package="io.qaninja.android.twp" class="android.view.ViewGroup" text="" checkable="false" checked="false" clickable="false" enabled="true" focusable="false" focused="false" long-clickable="false" password="false" scrollable="false" selected="false" bounds="[7,1669][728,1794]" displayed="true"&gt;
-                      &lt;android.widget.ImageView index="0" package="io.qaninja.android.twp" class="android.widget.ImageView" text="" content-desc="Icon" resource-id="io.qaninja.android.twp:id/ivItemIcon" checkable="false" checked="false" clickable="false" enabled="true" focusable="false" focused="false" long-clickable="false" password="false" scrollable="false" selected="false" bounds="[49,1722][133,1794]" displayed="true" /&gt;
-                      &lt;android.widget.TextView index="1" package="io.qaninja.android.twp" class="android.widget.TextView" text="BOTÕES" resource-id="io.qaninja.android.twp:id/tvItemTitle" checkable="false" checked="false" clickable="false" enabled="true" focusable="false" focused="false" long-clickable="false" password="false" scrollable="false" selected="false" bounds="[175,1739][686,1790]" displayed="true" /&gt;
-                    &lt;/android.view.ViewGroup&gt;
-                  &lt;/android.widget.FrameLayout&gt;
-                &lt;/androidx.recyclerview.widget.RecyclerView&gt;
-                &lt;androidx.recyclerview.widget.RecyclerView index="1" package="io.qaninja.android.twp" class="androidx.recyclerview.widget.RecyclerView" text="" resource-id="io.qaninja.android.twp:id/design_navigation_view" checkable="false" checked="false" clickable="false" enabled="true" focusable="true" focused="false" long-clickable="false" password="false" scrollable="false" selected="false" bounds="[0,0][735,1794]" displayed="true"&gt;
-                  &lt;android.widget.LinearLayout index="0" package="io.qaninja.android.twp" class="android.widget.LinearLayout" text="" resource-id="io.qaninja.android.twp:id/navigation_header_container" checkable="false" checked="false" clickable="false" enabled="true" focusable="false" focused="false" long-clickable="false" password="false" scrollable="false" selected="false" bounds="[0,63][735,84]" displayed="true" /&gt;
-                &lt;/androidx.recyclerview.widget.RecyclerView&gt;
-              &lt;/android.widget.FrameLayout&gt;
-              &lt;android.view.ViewGroup index="1" package="io.qaninja.android.twp" class="android.view.ViewGroup" text="" checkable="false" checked="false" clickable="false" enabled="true" focusable="false" focused="false" long-clickable="false" password="false" scrollable="false" selected="false" bounds="[0,63][1080,1794]" displayed="true"&gt;
-                &lt;android.widget.LinearLayout index="0" package="io.qaninja.android.twp" class="android.widget.LinearLayout" text="" checkable="false" checked="false" clickable="false" enabled="true" focusable="false" focused="false" long-clickable="false" password="false" scrollable="false" selected="false" bounds="[0,63][1080,210]" displayed="true"&gt;
-                  &lt;android.view.ViewGroup index="0" package="io.qaninja.android.twp" class="android.view.ViewGroup" text="" resource-id="io.qaninja.android.twp:id/toolbar" checkable="false" checked="false" clickable="false" enabled="true" focusable="false" focused="false" long-clickable="false" password="false" scrollable="false" selected="false" bounds="[0,63][1080,210]" displayed="true"&gt;
-                    &lt;android.widget.ImageButton index="0" package="io.qaninja.android.twp" class="android.widget.ImageButton" text="" content-desc="Close navigation drawer" checkable="false" checked="false" clickable="true" enabled="true" focusable="true" focused="false" long-clickable="false" password="false" scrollable="false" selected="false" bounds="[0,63][147,210]" displayed="true" /&gt;
-                    &lt;android.view.ViewGroup index="1" package="io.qaninja.android.twp" class="android.view.ViewGroup" text="" checkable="false" checked="false" clickable="false" enabled="true" focusable="false" focused="false" long-clickable="false" password="false" scrollable="false" selected="false" bounds="[189,63][1080,210]" displayed="true"&gt;
-                      &lt;android.widget.TextView index="0" package="io.qaninja.android.twp" class="android.widget.TextView" text="AVENGERS" resource-id="io.qaninja.android.twp:id/toolbarTitle" checkable="false" checked="false" clickable="false" enabled="true" focusable="false" focused="false" long-clickable="false" password="false" scrollable="false" selected="false" bounds="[189,115][888,158]" displayed="true" /&gt;
-                      &lt;android.widget.Button index="1" package="io.qaninja.android.twp" class="android.widget.Button" text="QA NINJA" resource-id="io.qaninja.android.twp:id/btnBuyNowToolbar" checkable="false" checked="false" clickable="true" enabled="true" focusable="true" focused="false" long-clickable="false" password="false" scrollable="false" selected="false" bounds="[888,96][1059,177]" displayed="true" /&gt;
-                    &lt;/android.view.ViewGroup&gt;
-                  &lt;/android.view.ViewGroup&gt;
-                &lt;/android.widget.LinearLayout&gt;
-                &lt;android.view.ViewGroup index="1" package="io.qaninja.android.twp" class="android.view.ViewGroup" text="" checkable="false" checked="false" clickable="false" enabled="true" focusable="false" focused="false" long-clickable="false" password="false" scrollable="false" selected="false" bounds="[0,210][1080,1794]" displayed="true"&gt;
-                  &lt;android.widget.FrameLayout index="0" package="io.qaninja.android.twp" class="android.widget.FrameLayout" text="" resource-id="io.qaninja.android.twp:id/main_container" checkable="false" checked="false" clickable="false" enabled="true" focusable="false" focused="false" long-clickable="false" password="false" scrollable="false" selected="false" bounds="[0,210][1080,1794]" displayed="true"&gt;
-                    &lt;android.view.ViewGroup index="0" package="io.qaninja.android.twp" class="android.view.ViewGroup" text="" resource-id="io.qaninja.android.twp:id/swipeRefresh" checkable="false" checked="false" clickable="false" enabled="true" focusable="false" focused="false" long-clickable="false" password="false" scrollable="false" selected="false" bounds="[0,210][1080,1794]" displayed="true"&gt;
-                      &lt;androidx.recyclerview.widget.RecyclerView index="0" package="io.qaninja.android.twp" class="androidx.recyclerview.widget.RecyclerView" text="" resource-id="io.qaninja.android.twp:id/rvSubMenu" checkable="false" checked="false" clickable="false" enabled="true" focusable="true" focused="false" long-clickable="false" password="false" scrollable="false" selected="false" bounds="[0,210][1080,1794]" displayed="true"&gt;
-                        &lt;android.widget.FrameLayout index="0" package="io.qaninja.android.twp" class="android.widget.FrameLayout" text="" checkable="false" checked="false" clickable="true" enabled="true" focusable="true" focused="false" long-clickable="false" password="false" scrollable="false" selected="false" bounds="[21,231][1059,838]" displayed="true"&gt;
-                          &lt;android.widget.LinearLayout index="0" package="io.qaninja.android.twp" class="android.widget.LinearLayout" text="" checkable="false" checked="false" clickable="false" enabled="true" focusable="false" focused="false" long-clickable="false" password="false" scrollable="false" selected="false" bounds="[28,241][1052,828]" displayed="true"&gt;
-                            &lt;android.widget.FrameLayout index="0" package="io.qaninja.android.twp" class="android.widget.FrameLayout" text="" checkable="false" checked="false" clickable="false" enabled="true" focusable="false" focused="false" long-clickable="false" password="false" scrollable="false" selected="false" bounds="[28,241][1052,687]" displayed="true"&gt;
-                              &lt;android.widget.ImageView index="0" package="io.qaninja.android.twp" class="android.widget.ImageView" text="" content-desc="Icon" resource-id="io.qaninja.android.twp:id/ivItemIcon" checkable="false" checked="false" clickable="false" enabled="true" focusable="false" focused="false" long-clickable="false" password="false" scrollable="false" selected="false" bounds="[461,384][619,544]" displayed="true" /&gt;
-                            &lt;/android.widget.FrameLayout&gt;
-                            &lt;android.widget.TextView index="1" package="io.qaninja.android.twp" class="android.widget.TextView" text="LISTA" resource-id="io.qaninja.android.twp:id/tvItemTitle" checkable="false" checked="false" clickable="false" enabled="true" focusable="false" focused="false" long-clickable="false" password="false" scrollable="false" selected="false" bounds="[28,687][1052,828]" displayed="true" /&gt;
-                          &lt;/android.widget.LinearLayout&gt;
-                        &lt;/android.widget.FrameLayout&gt;
-                        &lt;android.widget.FrameLayout index="1" package="io.qaninja.android.twp" class="android.widget.FrameLayout" text="" checkable="false" checked="false" clickable="true" enabled="true" focusable="true" focused="false" long-clickable="false" password="false" scrollable="false" selected="false" bounds="[21,859][1059,1466]" displayed="true"&gt;
-                          &lt;android.widget.LinearLayout index="0" package="io.qaninja.android.twp" class="android.widget.LinearLayout" text="" checkable="false" checked="false" clickable="false" enabled="true" focusable="false" focused="false" long-clickable="false" password="false" scrollable="false" selected="false" bounds="[28,869][1052,1456]" displayed="true"&gt;
-                            &lt;android.widget.FrameLayout index="0" package="io.qaninja.android.twp" class="android.widget.FrameLayout" text="" checkable="false" checked="false" clickable="false" enabled="true" focusable="false" focused="false" long-clickable="false" password="false" scrollable="false" selected="false" bounds="[28,869][1052,1315]" displayed="true"&gt;
-                              &lt;android.widget.ImageView index="0" package="io.qaninja.android.twp" class="android.widget.ImageView" text="" content-desc="Icon" resource-id="io.qaninja.android.twp:id/ivItemIcon" checkable="false" checked="false" clickable="false" enabled="true" focusable="false" focused="false" long-clickable="false" password="false" scrollable="false" selected="false" bounds="[474,1035][605,1148]" displayed="true" /&gt;
-                            &lt;/android.widget.FrameLayout&gt;
-                            &lt;android.widget.TextView index="1" package="io.qaninja.android.twp" class="android.widget.TextView" text="BUSCA" resource-id="io.qaninja.android.twp:id/tvItemTitle" checkable="false" checked="false" clickable="false" enabled="true" focusable="false" focused="false" long-clickable="false" password="false" scrollable="false" selected="false" bounds="[28,1315][1052,1456]" displayed="true" /&gt;
-                          &lt;/android.widget.LinearLayout&gt;
-                        &lt;/android.widget.FrameLayout&gt;
-                      &lt;/androidx.recyclerview.widget.RecyclerView&gt;
-                    &lt;/android.view.ViewGroup&gt;
-                  &lt;/android.widget.FrameLayout&gt;
-                &lt;/android.view.ViewGroup&gt;
-              &lt;/android.view.ViewGroup&gt;
-            &lt;/androidx.drawerlayout.widget.DrawerLayout&gt;
-          &lt;/android.widget.FrameLayout&gt;
-        &lt;/android.widget.LinearLayout&gt;
-      &lt;/android.widget.FrameLayout&gt;
-    &lt;/android.widget.LinearLayout&gt;
-  &lt;/android.widget.FrameLayout&gt;
-&lt;/hierarchy&gt;</msg>
+<kw name="Close Session" library="base" type="TEARDOWN">
 <kw name="Capture Page Screenshot" library="AppiumLibrary">
 <doc>Takes a screenshot of the current page and embeds it into the log.</doc>
-<msg timestamp="20210926 22:24:51.729" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="appium-screenshot-1.png"&gt;&lt;img src="appium-screenshot-1.png" width="800px"&gt;&lt;/a&gt;</msg>
-<status status="PASS" starttime="20210926 22:24:51.357" endtime="20210926 22:24:51.729"/>
+<msg timestamp="20210927 02:31:02.823" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="appium-screenshot-1.png"&gt;&lt;img src="appium-screenshot-1.png" width="800px"&gt;&lt;/a&gt;</msg>
+<status status="PASS" starttime="20210927 02:31:01.891" endtime="20210927 02:31:02.824"/>
 </kw>
-<msg timestamp="20210926 22:24:51.730" level="FAIL">Element locator 'xpath=//android.widget.ImageButton[@content-desc="Open navigation drawer"]' did not match any elements after 10 seconds</msg>
-<status status="FAIL" starttime="20210926 22:24:37.490" endtime="20210926 22:24:51.731"/>
-</kw>
-<kw name="Click Element" library="AppiumLibrary">
-<arg>xpath=//android.widget.ImageButton[@content-desc="Open navigation drawer"]</arg>
-<doc>Click element identified by `locator`.</doc>
-<status status="NOT RUN" starttime="20210926 22:24:51.731" endtime="20210926 22:24:51.731"/>
-</kw>
-<kw name="Wait Until Element Is Visible" library="AppiumLibrary">
-<arg>id=io.qaninja.android.twp:id/navView</arg>
-<doc>Waits until element specified with `locator` is visible.</doc>
-<status status="NOT RUN" starttime="20210926 22:24:51.732" endtime="20210926 22:24:51.732"/>
-</kw>
-<kw name="Click Text" library="AppiumLibrary">
-<arg>FORMS</arg>
-<doc>Click text identified by ``text``.</doc>
-<status status="NOT RUN" starttime="20210926 22:24:51.732" endtime="20210926 22:24:51.733"/>
-</kw>
-<kw name="Wait Until Element Is Visible" library="AppiumLibrary">
-<arg>id=io.qaninja.android.twp:id/toolbarTitle</arg>
-<doc>Waits until element specified with `locator` is visible.</doc>
-<status status="NOT RUN" starttime="20210926 22:24:51.733" endtime="20210926 22:24:51.733"/>
-</kw>
-<kw name="Element Text Should Be" library="AppiumLibrary">
-<arg>id=io.qaninja.android.twp:id/toolbarTitle</arg>
-<arg>FORMS</arg>
-<doc>Verifies element identified by ``locator`` exactly contains text ``expected``.</doc>
-<status status="NOT RUN" starttime="20210926 22:24:51.733" endtime="20210926 22:24:51.734"/>
-</kw>
-<kw name="Close Session" type="TEARDOWN">
 <kw name="Close Application" library="AppiumLibrary">
 <doc>Closes the current application and also close webdriver session.</doc>
-<status status="PASS" starttime="20210926 22:24:51.734" endtime="20210926 22:24:52.996"/>
+<status status="PASS" starttime="20210927 02:31:02.824" endtime="20210927 02:31:03.854"/>
 </kw>
-<status status="PASS" starttime="20210926 22:24:51.734" endtime="20210926 22:24:52.997"/>
+<status status="PASS" starttime="20210927 02:31:01.890" endtime="20210927 02:31:03.855"/>
 </kw>
-<status status="FAIL" starttime="20210926 22:24:13.763" endtime="20210926 22:24:52.998">Element locator 'xpath=//android.widget.ImageButton[@content-desc="Open navigation drawer"]' did not match any elements after 10 seconds</status>
+<tag>short</tag>
+<status status="FAIL" starttime="20210927 02:30:46.432" endtime="20210927 02:31:03.855">Setup failed:
+Keyword with same name defined multiple times.</status>
 </test>
-<test id="s1-t3" name="Deve acessar a tela de vingadores">
-<kw name="Open Session" type="SETUP">
+<test id="s1-s1-t2" name="Deve realizar um clique loooooongooooo">
+<kw name="Open Session" library="base" type="SETUP">
 <kw name="Set Appium Timeout" library="AppiumLibrary">
 <arg>10</arg>
 <doc>Sets the timeout in seconds used by various keywords.</doc>
-<status status="PASS" starttime="20210926 22:24:53.002" endtime="20210926 22:24:53.002"/>
+<status status="PASS" starttime="20210927 02:31:03.858" endtime="20210927 02:31:03.858"/>
 </kw>
 <kw name="Open Application" library="AppiumLibrary">
 <arg>http://localhost:4723/wd/hub</arg>
@@ -301,80 +72,448 @@ Please check https://github.com/appium/appium/blob/master/docs/en/writing-runnin
 | *Option*            | *Man.* | *Description*     |
 | remote_url          | Yes    | Appium server url |
 | alias               | no     | alias             |</doc>
-<status status="PASS" starttime="20210926 22:24:53.002" endtime="20210926 22:25:10.408"/>
+<status status="PASS" starttime="20210927 02:31:03.859" endtime="20210927 02:31:19.941"/>
 </kw>
-<status status="PASS" starttime="20210926 22:24:53.001" endtime="20210926 22:25:10.409"/>
+<kw name="Get Started" library="helpers">
+<kw name=" Wait Until Page Contains" library="helpers">
+<arg>${START}</arg>
+<msg timestamp="20210927 02:31:19.943" level="FAIL">Keyword with same name defined multiple times.</msg>
+<status status="FAIL" starttime="20210927 02:31:19.942" endtime="20210927 02:31:19.943"/>
 </kw>
-<kw name="Get Started">
-<kw name="Wait Until Page Contains" library="AppiumLibrary">
-<arg>COMEÇAR</arg>
-<doc>Waits until `text` appears on current page.</doc>
-<status status="PASS" starttime="20210926 22:25:10.411" endtime="20210926 22:25:13.908"/>
+<kw name=" Click Text" library="helpers">
+<arg>${START}</arg>
+<status status="NOT RUN" starttime="20210927 02:31:19.943" endtime="20210927 02:31:19.943"/>
 </kw>
-<kw name="Click Text" library="AppiumLibrary">
-<arg>COMEÇAR</arg>
-<doc>Click text identified by ``text``.</doc>
-<status status="PASS" starttime="20210926 22:25:13.909" endtime="20210926 22:25:14.130"/>
+<status status="FAIL" starttime="20210927 02:31:19.941" endtime="20210927 02:31:19.944"/>
 </kw>
-<status status="PASS" starttime="20210926 22:25:10.410" endtime="20210926 22:25:14.130"/>
+<status status="FAIL" starttime="20210927 02:31:03.858" endtime="20210927 02:31:19.945"/>
 </kw>
-<kw name="Open Nav">
-<kw name="Wait Until Element Is Visible" library="AppiumLibrary">
-<arg>xpath=//android.widget.ImageButton[@content-desc="Open navigation drawer"]</arg>
-<doc>Waits until element specified with `locator` is visible.</doc>
-<status status="PASS" starttime="20210926 22:25:14.131" endtime="20210926 22:25:15.407"/>
+<kw name="Close Session" library="base" type="TEARDOWN">
+<kw name="Capture Page Screenshot" library="AppiumLibrary">
+<doc>Takes a screenshot of the current page and embeds it into the log.</doc>
+<msg timestamp="20210927 02:31:20.754" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="appium-screenshot-2.png"&gt;&lt;img src="appium-screenshot-2.png" width="800px"&gt;&lt;/a&gt;</msg>
+<status status="PASS" starttime="20210927 02:31:19.950" endtime="20210927 02:31:20.754"/>
 </kw>
-<kw name="Click Element" library="AppiumLibrary">
-<arg>xpath=//android.widget.ImageButton[@content-desc="Open navigation drawer"]</arg>
-<doc>Click element identified by `locator`.</doc>
-<msg timestamp="20210926 22:25:15.409" level="INFO">Clicking element 'xpath=//android.widget.ImageButton[@content-desc="Open navigation drawer"]'.</msg>
-<status status="PASS" starttime="20210926 22:25:15.407" endtime="20210926 22:25:15.519"/>
-</kw>
-<kw name="Wait Until Element Is Visible" library="AppiumLibrary">
-<arg>id=io.qaninja.android.twp:id/navView</arg>
-<doc>Waits until element specified with `locator` is visible.</doc>
-<status status="PASS" starttime="20210926 22:25:15.519" endtime="20210926 22:25:16.482"/>
-</kw>
-<status status="PASS" starttime="20210926 22:25:14.131" endtime="20210926 22:25:16.482"/>
-</kw>
-<kw name="Click Text" library="AppiumLibrary">
-<arg>AVENGERS</arg>
-<doc>Click text identified by ``text``.</doc>
-<status status="PASS" starttime="20210926 22:25:16.482" endtime="20210926 22:25:16.651"/>
-</kw>
-<kw name="Wait Until Element Is Visible" library="AppiumLibrary">
-<arg>id=io.qaninja.android.twp:id/toolbarTitle</arg>
-<doc>Waits until element specified with `locator` is visible.</doc>
-<status status="PASS" starttime="20210926 22:25:16.652" endtime="20210926 22:25:17.585"/>
-</kw>
-<kw name="Element Text Should Be" library="AppiumLibrary">
-<arg>id=io.qaninja.android.twp:id/toolbarTitle</arg>
-<arg>AVENGERS</arg>
-<doc>Verifies element identified by ``locator`` exactly contains text ``expected``.</doc>
-<msg timestamp="20210926 22:25:17.588" level="INFO">Verifying element 'id=io.qaninja.android.twp:id/toolbarTitle' contains exactly text 'AVENGERS'.</msg>
-<status status="PASS" starttime="20210926 22:25:17.586" endtime="20210926 22:25:17.638"/>
-</kw>
-<kw name="Close Session" type="TEARDOWN">
 <kw name="Close Application" library="AppiumLibrary">
 <doc>Closes the current application and also close webdriver session.</doc>
-<status status="PASS" starttime="20210926 22:25:17.640" endtime="20210926 22:25:18.946"/>
+<status status="PASS" starttime="20210927 02:31:20.755" endtime="20210927 02:31:21.964"/>
 </kw>
-<status status="PASS" starttime="20210926 22:25:17.639" endtime="20210926 22:25:18.946"/>
+<status status="PASS" starttime="20210927 02:31:19.949" endtime="20210927 02:31:21.965"/>
 </kw>
-<status status="PASS" starttime="20210926 22:24:53.000" endtime="20210926 22:25:18.946"/>
+<tag>long</tag>
+<status status="FAIL" starttime="20210927 02:31:03.857" endtime="20210927 02:31:21.967">Setup failed:
+Keyword with same name defined multiple times.</status>
 </test>
-<status status="FAIL" starttime="20210926 22:23:26.801" endtime="20210926 22:25:18.948"/>
+<status status="FAIL" starttime="20210927 02:30:46.200" endtime="20210927 02:31:21.971"/>
+</suite>
+<suite id="s1-s2" name="Checkbox" source="c:\qaninja\twp\tests\checkbox.robot">
+<test id="s1-s2-t1" name="Deve marcar a opção Robot Framework">
+<kw name="Open Session" library="base" type="SETUP">
+<kw name="Set Appium Timeout" library="AppiumLibrary">
+<arg>10</arg>
+<doc>Sets the timeout in seconds used by various keywords.</doc>
+<status status="PASS" starttime="20210927 02:31:22.062" endtime="20210927 02:31:22.063"/>
+</kw>
+<kw name="Open Application" library="AppiumLibrary">
+<arg>http://localhost:4723/wd/hub</arg>
+<arg>automationName=UiAutomator2</arg>
+<arg>platformName=Android</arg>
+<arg>deviceName=Android Emulator</arg>
+<arg>app=${EXECDIR}/app/twp.apk</arg>
+<doc>Opens a new application to given Appium server.
+Capabilities of appium server, Android and iOS,
+Please check https://github.com/appium/appium/blob/master/docs/en/writing-running-appium/server-args.md
+| *Option*            | *Man.* | *Description*     |
+| remote_url          | Yes    | Appium server url |
+| alias               | no     | alias             |</doc>
+<status status="PASS" starttime="20210927 02:31:22.064" endtime="20210927 02:31:40.095"/>
+</kw>
+<kw name="Get Started" library="helpers">
+<kw name=" Wait Until Page Contains" library="helpers">
+<arg>${START}</arg>
+<msg timestamp="20210927 02:31:40.096" level="FAIL">Keyword with same name defined multiple times.</msg>
+<status status="FAIL" starttime="20210927 02:31:40.096" endtime="20210927 02:31:40.096"/>
+</kw>
+<kw name=" Click Text" library="helpers">
+<arg>${START}</arg>
+<status status="NOT RUN" starttime="20210927 02:31:40.096" endtime="20210927 02:31:40.096"/>
+</kw>
+<status status="FAIL" starttime="20210927 02:31:40.096" endtime="20210927 02:31:40.097"/>
+</kw>
+<status status="FAIL" starttime="20210927 02:31:22.060" endtime="20210927 02:31:40.097"/>
+</kw>
+<kw name="Close Session" library="base" type="TEARDOWN">
+<kw name="Capture Page Screenshot" library="AppiumLibrary">
+<doc>Takes a screenshot of the current page and embeds it into the log.</doc>
+<msg timestamp="20210927 02:31:40.705" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="appium-screenshot-3.png"&gt;&lt;img src="appium-screenshot-3.png" width="800px"&gt;&lt;/a&gt;</msg>
+<status status="PASS" starttime="20210927 02:31:40.098" endtime="20210927 02:31:40.706"/>
+</kw>
+<kw name="Close Application" library="AppiumLibrary">
+<doc>Closes the current application and also close webdriver session.</doc>
+<status status="PASS" starttime="20210927 02:31:40.706" endtime="20210927 02:31:41.951"/>
+</kw>
+<status status="PASS" starttime="20210927 02:31:40.098" endtime="20210927 02:31:41.951"/>
+</kw>
+<status status="FAIL" starttime="20210927 02:31:22.058" endtime="20210927 02:31:41.951">Setup failed:
+Keyword with same name defined multiple times.</status>
+</test>
+<status status="FAIL" starttime="20210927 02:31:21.976" endtime="20210927 02:31:41.954"/>
+</suite>
+<suite id="s1-s3" name="Home" source="c:\qaninja\twp\tests\home.robot">
+<test id="s1-s3-t1" name="Deve abrir a tela principal">
+<kw name="Open Application" library="AppiumLibrary">
+<arg>http://localhost:4723/wd/hub</arg>
+<arg>automationName=UiAutomator2</arg>
+<arg>platformName=Android</arg>
+<arg>deviceName=Android Emulator</arg>
+<arg>app=${EXECDIR}/app/twp.apk</arg>
+<doc>Opens a new application to given Appium server.
+Capabilities of appium server, Android and iOS,
+Please check https://github.com/appium/appium/blob/master/docs/en/writing-running-appium/server-args.md
+| *Option*            | *Man.* | *Description*     |
+| remote_url          | Yes    | Appium server url |
+| alias               | no     | alias             |</doc>
+<status status="PASS" starttime="20210927 02:31:41.966" endtime="20210927 02:31:58.581"/>
+</kw>
+<kw name="Wait Until Page Contains" library="AppiumLibrary">
+<arg>Training Wheels Protocol</arg>
+<arg>5</arg>
+<doc>Waits until `text` appears on current page.</doc>
+<status status="PASS" starttime="20210927 02:31:58.583" endtime="20210927 02:32:03.576"/>
+</kw>
+<kw name="Wait Until Page Contains" library="AppiumLibrary">
+<arg>Mobile Version</arg>
+<arg>5</arg>
+<doc>Waits until `text` appears on current page.</doc>
+<status status="PASS" starttime="20210927 02:32:03.577" endtime="20210927 02:32:03.677"/>
+</kw>
+<kw name="Close Application" library="AppiumLibrary">
+<doc>Closes the current application and also close webdriver session.</doc>
+<status status="PASS" starttime="20210927 02:32:03.678" endtime="20210927 02:32:04.711"/>
+</kw>
+<status status="PASS" starttime="20210927 02:31:41.965" endtime="20210927 02:32:04.713"/>
+</test>
+<status status="PASS" starttime="20210927 02:31:41.959" endtime="20210927 02:32:04.716"/>
+</suite>
+<suite id="s1-s4" name="Login" source="c:\qaninja\twp\tests\login.robot">
+<test id="s1-s4-t1" name="Deve logar com sucesso">
+<kw name="Open Session" library="base" type="SETUP">
+<kw name="Set Appium Timeout" library="AppiumLibrary">
+<arg>10</arg>
+<doc>Sets the timeout in seconds used by various keywords.</doc>
+<status status="PASS" starttime="20210927 02:32:04.742" endtime="20210927 02:32:04.743"/>
+</kw>
+<kw name="Open Application" library="AppiumLibrary">
+<arg>http://localhost:4723/wd/hub</arg>
+<arg>automationName=UiAutomator2</arg>
+<arg>platformName=Android</arg>
+<arg>deviceName=Android Emulator</arg>
+<arg>app=${EXECDIR}/app/twp.apk</arg>
+<doc>Opens a new application to given Appium server.
+Capabilities of appium server, Android and iOS,
+Please check https://github.com/appium/appium/blob/master/docs/en/writing-running-appium/server-args.md
+| *Option*            | *Man.* | *Description*     |
+| remote_url          | Yes    | Appium server url |
+| alias               | no     | alias             |</doc>
+<status status="PASS" starttime="20210927 02:32:04.743" endtime="20210927 02:32:22.479"/>
+</kw>
+<kw name="Get Started" library="helpers">
+<kw name=" Wait Until Page Contains" library="helpers">
+<arg>${START}</arg>
+<msg timestamp="20210927 02:32:22.480" level="FAIL">Keyword with same name defined multiple times.</msg>
+<status status="FAIL" starttime="20210927 02:32:22.480" endtime="20210927 02:32:22.480"/>
+</kw>
+<kw name=" Click Text" library="helpers">
+<arg>${START}</arg>
+<status status="NOT RUN" starttime="20210927 02:32:22.480" endtime="20210927 02:32:22.480"/>
+</kw>
+<status status="FAIL" starttime="20210927 02:32:22.479" endtime="20210927 02:32:22.481"/>
+</kw>
+<status status="FAIL" starttime="20210927 02:32:04.741" endtime="20210927 02:32:22.482"/>
+</kw>
+<kw name="Close Session" library="base" type="TEARDOWN">
+<kw name="Capture Page Screenshot" library="AppiumLibrary">
+<doc>Takes a screenshot of the current page and embeds it into the log.</doc>
+<msg timestamp="20210927 02:32:23.127" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="appium-screenshot-4.png"&gt;&lt;img src="appium-screenshot-4.png" width="800px"&gt;&lt;/a&gt;</msg>
+<status status="PASS" starttime="20210927 02:32:22.484" endtime="20210927 02:32:23.128"/>
+</kw>
+<kw name="Close Application" library="AppiumLibrary">
+<doc>Closes the current application and also close webdriver session.</doc>
+<status status="PASS" starttime="20210927 02:32:23.128" endtime="20210927 02:32:24.356"/>
+</kw>
+<status status="PASS" starttime="20210927 02:32:22.483" endtime="20210927 02:32:24.357"/>
+</kw>
+<status status="FAIL" starttime="20210927 02:32:04.740" endtime="20210927 02:32:24.358">Setup failed:
+Keyword with same name defined multiple times.</status>
+</test>
+<status status="FAIL" starttime="20210927 02:32:04.719" endtime="20210927 02:32:24.360"/>
+</suite>
+<suite id="s1-s5" name="Nav" source="c:\qaninja\twp\tests\nav.robot">
+<test id="s1-s5-t1" name="Deve acessar a tela Dialogs">
+<kw name="Open Session" library="base" type="SETUP">
+<kw name="Set Appium Timeout" library="AppiumLibrary">
+<arg>10</arg>
+<doc>Sets the timeout in seconds used by various keywords.</doc>
+<status status="PASS" starttime="20210927 02:32:24.383" endtime="20210927 02:32:24.383"/>
+</kw>
+<kw name="Open Application" library="AppiumLibrary">
+<arg>http://localhost:4723/wd/hub</arg>
+<arg>automationName=UiAutomator2</arg>
+<arg>platformName=Android</arg>
+<arg>deviceName=Android Emulator</arg>
+<arg>app=${EXECDIR}/app/twp.apk</arg>
+<doc>Opens a new application to given Appium server.
+Capabilities of appium server, Android and iOS,
+Please check https://github.com/appium/appium/blob/master/docs/en/writing-running-appium/server-args.md
+| *Option*            | *Man.* | *Description*     |
+| remote_url          | Yes    | Appium server url |
+| alias               | no     | alias             |</doc>
+<status status="PASS" starttime="20210927 02:32:24.383" endtime="20210927 02:32:42.089"/>
+</kw>
+<kw name="Get Started" library="helpers">
+<kw name=" Wait Until Page Contains" library="helpers">
+<arg>${START}</arg>
+<msg timestamp="20210927 02:32:42.090" level="FAIL">Keyword with same name defined multiple times.</msg>
+<status status="FAIL" starttime="20210927 02:32:42.090" endtime="20210927 02:32:42.090"/>
+</kw>
+<kw name=" Click Text" library="helpers">
+<arg>${START}</arg>
+<status status="NOT RUN" starttime="20210927 02:32:42.091" endtime="20210927 02:32:42.091"/>
+</kw>
+<status status="FAIL" starttime="20210927 02:32:42.090" endtime="20210927 02:32:42.091"/>
+</kw>
+<status status="FAIL" starttime="20210927 02:32:24.382" endtime="20210927 02:32:42.091"/>
+</kw>
+<kw name="Close Session" library="base" type="TEARDOWN">
+<kw name="Capture Page Screenshot" library="AppiumLibrary">
+<doc>Takes a screenshot of the current page and embeds it into the log.</doc>
+<msg timestamp="20210927 02:32:42.913" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="appium-screenshot-5.png"&gt;&lt;img src="appium-screenshot-5.png" width="800px"&gt;&lt;/a&gt;</msg>
+<status status="PASS" starttime="20210927 02:32:42.093" endtime="20210927 02:32:42.913"/>
+</kw>
+<kw name="Close Application" library="AppiumLibrary">
+<doc>Closes the current application and also close webdriver session.</doc>
+<status status="PASS" starttime="20210927 02:32:42.914" endtime="20210927 02:32:44.211"/>
+</kw>
+<status status="PASS" starttime="20210927 02:32:42.092" endtime="20210927 02:32:44.212"/>
+</kw>
+<status status="FAIL" starttime="20210927 02:32:24.381" endtime="20210927 02:32:44.212">Setup failed:
+Keyword with same name defined multiple times.</status>
+</test>
+<test id="s1-s5-t2" name="Deve acessar a tela de formulários">
+<kw name="Open Session" library="base" type="SETUP">
+<kw name="Set Appium Timeout" library="AppiumLibrary">
+<arg>10</arg>
+<doc>Sets the timeout in seconds used by various keywords.</doc>
+<status status="PASS" starttime="20210927 02:32:44.218" endtime="20210927 02:32:44.218"/>
+</kw>
+<kw name="Open Application" library="AppiumLibrary">
+<arg>http://localhost:4723/wd/hub</arg>
+<arg>automationName=UiAutomator2</arg>
+<arg>platformName=Android</arg>
+<arg>deviceName=Android Emulator</arg>
+<arg>app=${EXECDIR}/app/twp.apk</arg>
+<doc>Opens a new application to given Appium server.
+Capabilities of appium server, Android and iOS,
+Please check https://github.com/appium/appium/blob/master/docs/en/writing-running-appium/server-args.md
+| *Option*            | *Man.* | *Description*     |
+| remote_url          | Yes    | Appium server url |
+| alias               | no     | alias             |</doc>
+<status status="PASS" starttime="20210927 02:32:44.218" endtime="20210927 02:33:02.426"/>
+</kw>
+<kw name="Get Started" library="helpers">
+<kw name=" Wait Until Page Contains" library="helpers">
+<arg>${START}</arg>
+<msg timestamp="20210927 02:33:02.428" level="FAIL">Keyword with same name defined multiple times.</msg>
+<status status="FAIL" starttime="20210927 02:33:02.428" endtime="20210927 02:33:02.428"/>
+</kw>
+<kw name=" Click Text" library="helpers">
+<arg>${START}</arg>
+<status status="NOT RUN" starttime="20210927 02:33:02.428" endtime="20210927 02:33:02.428"/>
+</kw>
+<status status="FAIL" starttime="20210927 02:33:02.426" endtime="20210927 02:33:02.428"/>
+</kw>
+<status status="FAIL" starttime="20210927 02:32:44.217" endtime="20210927 02:33:02.429"/>
+</kw>
+<kw name="Close Session" library="base" type="TEARDOWN">
+<kw name="Capture Page Screenshot" library="AppiumLibrary">
+<doc>Takes a screenshot of the current page and embeds it into the log.</doc>
+<msg timestamp="20210927 02:33:02.993" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="appium-screenshot-6.png"&gt;&lt;img src="appium-screenshot-6.png" width="800px"&gt;&lt;/a&gt;</msg>
+<status status="PASS" starttime="20210927 02:33:02.431" endtime="20210927 02:33:02.993"/>
+</kw>
+<kw name="Close Application" library="AppiumLibrary">
+<doc>Closes the current application and also close webdriver session.</doc>
+<status status="PASS" starttime="20210927 02:33:02.993" endtime="20210927 02:33:04.215"/>
+</kw>
+<status status="PASS" starttime="20210927 02:33:02.430" endtime="20210927 02:33:04.215"/>
+</kw>
+<status status="FAIL" starttime="20210927 02:32:44.216" endtime="20210927 02:33:04.216">Setup failed:
+Keyword with same name defined multiple times.</status>
+</test>
+<test id="s1-s5-t3" name="Deve acessar a tela de vingadores">
+<kw name="Open Session" library="base" type="SETUP">
+<kw name="Set Appium Timeout" library="AppiumLibrary">
+<arg>10</arg>
+<doc>Sets the timeout in seconds used by various keywords.</doc>
+<status status="PASS" starttime="20210927 02:33:04.218" endtime="20210927 02:33:04.219"/>
+</kw>
+<kw name="Open Application" library="AppiumLibrary">
+<arg>http://localhost:4723/wd/hub</arg>
+<arg>automationName=UiAutomator2</arg>
+<arg>platformName=Android</arg>
+<arg>deviceName=Android Emulator</arg>
+<arg>app=${EXECDIR}/app/twp.apk</arg>
+<doc>Opens a new application to given Appium server.
+Capabilities of appium server, Android and iOS,
+Please check https://github.com/appium/appium/blob/master/docs/en/writing-running-appium/server-args.md
+| *Option*            | *Man.* | *Description*     |
+| remote_url          | Yes    | Appium server url |
+| alias               | no     | alias             |</doc>
+<status status="PASS" starttime="20210927 02:33:04.219" endtime="20210927 02:33:22.451"/>
+</kw>
+<kw name="Get Started" library="helpers">
+<kw name=" Wait Until Page Contains" library="helpers">
+<arg>${START}</arg>
+<msg timestamp="20210927 02:33:22.453" level="FAIL">Keyword with same name defined multiple times.</msg>
+<status status="FAIL" starttime="20210927 02:33:22.453" endtime="20210927 02:33:22.453"/>
+</kw>
+<kw name=" Click Text" library="helpers">
+<arg>${START}</arg>
+<status status="NOT RUN" starttime="20210927 02:33:22.453" endtime="20210927 02:33:22.453"/>
+</kw>
+<status status="FAIL" starttime="20210927 02:33:22.451" endtime="20210927 02:33:22.454"/>
+</kw>
+<status status="FAIL" starttime="20210927 02:33:04.218" endtime="20210927 02:33:22.454"/>
+</kw>
+<kw name="Close Session" library="base" type="TEARDOWN">
+<kw name="Capture Page Screenshot" library="AppiumLibrary">
+<doc>Takes a screenshot of the current page and embeds it into the log.</doc>
+<msg timestamp="20210927 02:33:23.068" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="appium-screenshot-7.png"&gt;&lt;img src="appium-screenshot-7.png" width="800px"&gt;&lt;/a&gt;</msg>
+<status status="PASS" starttime="20210927 02:33:22.456" endtime="20210927 02:33:23.068"/>
+</kw>
+<kw name="Close Application" library="AppiumLibrary">
+<doc>Closes the current application and also close webdriver session.</doc>
+<status status="PASS" starttime="20210927 02:33:23.068" endtime="20210927 02:33:24.178"/>
+</kw>
+<status status="PASS" starttime="20210927 02:33:22.455" endtime="20210927 02:33:24.179"/>
+</kw>
+<status status="FAIL" starttime="20210927 02:33:04.218" endtime="20210927 02:33:24.180">Setup failed:
+Keyword with same name defined multiple times.</status>
+</test>
+<status status="FAIL" starttime="20210927 02:32:24.363" endtime="20210927 02:33:24.183"/>
+</suite>
+<suite id="s1-s6" name="Radio" source="c:\qaninja\twp\tests\radio.robot">
+<test id="s1-s6-t1" name="Deve selecionar a opção Python">
+<kw name="Open Session" library="base" type="SETUP">
+<kw name="Set Appium Timeout" library="AppiumLibrary">
+<arg>10</arg>
+<doc>Sets the timeout in seconds used by various keywords.</doc>
+<status status="PASS" starttime="20210927 02:33:24.203" endtime="20210927 02:33:24.203"/>
+</kw>
+<kw name="Open Application" library="AppiumLibrary">
+<arg>http://localhost:4723/wd/hub</arg>
+<arg>automationName=UiAutomator2</arg>
+<arg>platformName=Android</arg>
+<arg>deviceName=Android Emulator</arg>
+<arg>app=${EXECDIR}/app/twp.apk</arg>
+<doc>Opens a new application to given Appium server.
+Capabilities of appium server, Android and iOS,
+Please check https://github.com/appium/appium/blob/master/docs/en/writing-running-appium/server-args.md
+| *Option*            | *Man.* | *Description*     |
+| remote_url          | Yes    | Appium server url |
+| alias               | no     | alias             |</doc>
+<status status="PASS" starttime="20210927 02:33:24.204" endtime="20210927 02:33:41.449"/>
+</kw>
+<kw name="Get Started" library="helpers">
+<kw name=" Wait Until Page Contains" library="helpers">
+<arg>${START}</arg>
+<msg timestamp="20210927 02:33:41.449" level="FAIL">Keyword with same name defined multiple times.</msg>
+<status status="FAIL" starttime="20210927 02:33:41.449" endtime="20210927 02:33:41.449"/>
+</kw>
+<kw name=" Click Text" library="helpers">
+<arg>${START}</arg>
+<status status="NOT RUN" starttime="20210927 02:33:41.450" endtime="20210927 02:33:41.450"/>
+</kw>
+<status status="FAIL" starttime="20210927 02:33:41.449" endtime="20210927 02:33:41.450"/>
+</kw>
+<status status="FAIL" starttime="20210927 02:33:24.202" endtime="20210927 02:33:41.450"/>
+</kw>
+<kw name="Close Session" library="base" type="TEARDOWN">
+<kw name="Capture Page Screenshot" library="AppiumLibrary">
+<doc>Takes a screenshot of the current page and embeds it into the log.</doc>
+<msg timestamp="20210927 02:33:42.050" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="appium-screenshot-8.png"&gt;&lt;img src="appium-screenshot-8.png" width="800px"&gt;&lt;/a&gt;</msg>
+<status status="PASS" starttime="20210927 02:33:41.452" endtime="20210927 02:33:42.050"/>
+</kw>
+<kw name="Close Application" library="AppiumLibrary">
+<doc>Closes the current application and also close webdriver session.</doc>
+<status status="PASS" starttime="20210927 02:33:42.050" endtime="20210927 02:33:43.189"/>
+</kw>
+<status status="PASS" starttime="20210927 02:33:41.451" endtime="20210927 02:33:43.190"/>
+</kw>
+<status status="FAIL" starttime="20210927 02:33:24.201" endtime="20210927 02:33:43.191">Setup failed:
+Keyword with same name defined multiple times.</status>
+</test>
+<status status="FAIL" starttime="20210927 02:33:24.187" endtime="20210927 02:33:43.194"/>
+</suite>
+<status status="FAIL" starttime="20210927 02:30:46.173" endtime="20210927 02:33:43.197"/>
 </suite>
 <statistics>
 <total>
-<stat pass="2" fail="1" skip="0">All Tests</stat>
+<stat pass="1" fail="8" skip="0">All Tests</stat>
 </total>
 <tag>
+<stat pass="0" fail="1" skip="0">long</stat>
+<stat pass="0" fail="1" skip="0">short</stat>
 </tag>
 <suite>
-<stat pass="2" fail="1" skip="0" id="s1" name="Nav">Nav</stat>
+<stat pass="1" fail="8" skip="0" id="s1" name="Tests">Tests</stat>
+<stat pass="0" fail="2" skip="0" id="s1-s1" name="Buttons">Tests.Buttons</stat>
+<stat pass="0" fail="1" skip="0" id="s1-s2" name="Checkbox">Tests.Checkbox</stat>
+<stat pass="1" fail="0" skip="0" id="s1-s3" name="Home">Tests.Home</stat>
+<stat pass="0" fail="1" skip="0" id="s1-s4" name="Login">Tests.Login</stat>
+<stat pass="0" fail="3" skip="0" id="s1-s5" name="Nav">Tests.Nav</stat>
+<stat pass="0" fail="1" skip="0" id="s1-s6" name="Radio">Tests.Radio</stat>
 </suite>
 </statistics>
 <errors>
+<msg timestamp="20210927 02:30:46.426" level="ERROR">Error in resource file 'c:\qaninja\twp\resources\helpers.robot': Creating keyword ' Open Nav' failed: Keyword with same name defined multiple times.</msg>
+<msg timestamp="20210927 02:30:46.427" level="ERROR">Error in resource file 'c:\qaninja\twp\resources\helpers.robot': Creating keyword ' Click Text' failed: Keyword with same name defined multiple times.</msg>
+<msg timestamp="20210927 02:30:46.428" level="ERROR">Error in resource file 'c:\qaninja\twp\resources\helpers.robot': Creating keyword ' Wait Until Page Contains' failed: Keyword with same name defined multiple times.</msg>
+<msg timestamp="20210927 02:30:46.428" level="ERROR">Error in resource file 'c:\qaninja\twp\resources\helpers.robot': Creating keyword ' Open Nav' failed: Keyword with same name defined multiple times.</msg>
+<msg timestamp="20210927 02:30:46.428" level="ERROR">Error in resource file 'c:\qaninja\twp\resources\helpers.robot': Creating keyword ' Click Text' failed: Keyword with same name defined multiple times.</msg>
+<msg timestamp="20210927 02:30:46.429" level="ERROR">Error in resource file 'c:\qaninja\twp\resources\helpers.robot': Creating keyword ' Wait Until Page Contains' failed: Keyword with same name defined multiple times.</msg>
+<msg timestamp="20210927 02:30:46.429" level="ERROR">Error in resource file 'c:\qaninja\twp\resources\helpers.robot': Creating keyword ' Click Text' failed: Keyword with same name defined multiple times.</msg>
+<msg timestamp="20210927 02:30:46.430" level="ERROR">Error in resource file 'c:\qaninja\twp\resources\helpers.robot': Creating keyword ' Wait Until Page Contains' failed: Keyword with same name defined multiple times.</msg>
+<msg timestamp="20210927 02:31:21.992" level="ERROR">Error in resource file 'c:\qaninja\twp\resources\helpers.robot': Creating keyword ' Open Nav' failed: Keyword with same name defined multiple times.</msg>
+<msg timestamp="20210927 02:31:21.997" level="ERROR">Error in resource file 'c:\qaninja\twp\resources\helpers.robot': Creating keyword ' Click Text' failed: Keyword with same name defined multiple times.</msg>
+<msg timestamp="20210927 02:31:21.998" level="ERROR">Error in resource file 'c:\qaninja\twp\resources\helpers.robot': Creating keyword ' Wait Until Page Contains' failed: Keyword with same name defined multiple times.</msg>
+<msg timestamp="20210927 02:31:21.999" level="ERROR">Error in resource file 'c:\qaninja\twp\resources\helpers.robot': Creating keyword ' Open Nav' failed: Keyword with same name defined multiple times.</msg>
+<msg timestamp="20210927 02:31:22.000" level="ERROR">Error in resource file 'c:\qaninja\twp\resources\helpers.robot': Creating keyword ' Click Text' failed: Keyword with same name defined multiple times.</msg>
+<msg timestamp="20210927 02:31:22.002" level="ERROR">Error in resource file 'c:\qaninja\twp\resources\helpers.robot': Creating keyword ' Wait Until Page Contains' failed: Keyword with same name defined multiple times.</msg>
+<msg timestamp="20210927 02:31:22.007" level="ERROR">Error in resource file 'c:\qaninja\twp\resources\helpers.robot': Creating keyword ' Click Text' failed: Keyword with same name defined multiple times.</msg>
+<msg timestamp="20210927 02:31:22.008" level="ERROR">Error in resource file 'c:\qaninja\twp\resources\helpers.robot': Creating keyword ' Wait Until Page Contains' failed: Keyword with same name defined multiple times.</msg>
+<msg timestamp="20210927 02:32:04.727" level="ERROR">Error in resource file 'c:\qaninja\twp\resources\helpers.robot': Creating keyword ' Open Nav' failed: Keyword with same name defined multiple times.</msg>
+<msg timestamp="20210927 02:32:04.730" level="ERROR">Error in resource file 'c:\qaninja\twp\resources\helpers.robot': Creating keyword ' Click Text' failed: Keyword with same name defined multiple times.</msg>
+<msg timestamp="20210927 02:32:04.732" level="ERROR">Error in resource file 'c:\qaninja\twp\resources\helpers.robot': Creating keyword ' Wait Until Page Contains' failed: Keyword with same name defined multiple times.</msg>
+<msg timestamp="20210927 02:32:04.734" level="ERROR">Error in resource file 'c:\qaninja\twp\resources\helpers.robot': Creating keyword ' Open Nav' failed: Keyword with same name defined multiple times.</msg>
+<msg timestamp="20210927 02:32:04.735" level="ERROR">Error in resource file 'c:\qaninja\twp\resources\helpers.robot': Creating keyword ' Click Text' failed: Keyword with same name defined multiple times.</msg>
+<msg timestamp="20210927 02:32:04.735" level="ERROR">Error in resource file 'c:\qaninja\twp\resources\helpers.robot': Creating keyword ' Wait Until Page Contains' failed: Keyword with same name defined multiple times.</msg>
+<msg timestamp="20210927 02:32:04.736" level="ERROR">Error in resource file 'c:\qaninja\twp\resources\helpers.robot': Creating keyword ' Click Text' failed: Keyword with same name defined multiple times.</msg>
+<msg timestamp="20210927 02:32:04.737" level="ERROR">Error in resource file 'c:\qaninja\twp\resources\helpers.robot': Creating keyword ' Wait Until Page Contains' failed: Keyword with same name defined multiple times.</msg>
+<msg timestamp="20210927 02:32:24.370" level="ERROR">Error in resource file 'c:\qaninja\twp\resources\helpers.robot': Creating keyword ' Open Nav' failed: Keyword with same name defined multiple times.</msg>
+<msg timestamp="20210927 02:32:24.372" level="ERROR">Error in resource file 'c:\qaninja\twp\resources\helpers.robot': Creating keyword ' Click Text' failed: Keyword with same name defined multiple times.</msg>
+<msg timestamp="20210927 02:32:24.374" level="ERROR">Error in resource file 'c:\qaninja\twp\resources\helpers.robot': Creating keyword ' Wait Until Page Contains' failed: Keyword with same name defined multiple times.</msg>
+<msg timestamp="20210927 02:32:24.375" level="ERROR">Error in resource file 'c:\qaninja\twp\resources\helpers.robot': Creating keyword ' Open Nav' failed: Keyword with same name defined multiple times.</msg>
+<msg timestamp="20210927 02:32:24.376" level="ERROR">Error in resource file 'c:\qaninja\twp\resources\helpers.robot': Creating keyword ' Click Text' failed: Keyword with same name defined multiple times.</msg>
+<msg timestamp="20210927 02:32:24.376" level="ERROR">Error in resource file 'c:\qaninja\twp\resources\helpers.robot': Creating keyword ' Wait Until Page Contains' failed: Keyword with same name defined multiple times.</msg>
+<msg timestamp="20210927 02:32:24.377" level="ERROR">Error in resource file 'c:\qaninja\twp\resources\helpers.robot': Creating keyword ' Click Text' failed: Keyword with same name defined multiple times.</msg>
+<msg timestamp="20210927 02:32:24.378" level="ERROR">Error in resource file 'c:\qaninja\twp\resources\helpers.robot': Creating keyword ' Wait Until Page Contains' failed: Keyword with same name defined multiple times.</msg>
+<msg timestamp="20210927 02:33:24.193" level="ERROR">Error in resource file 'c:\qaninja\twp\resources\helpers.robot': Creating keyword ' Open Nav' failed: Keyword with same name defined multiple times.</msg>
+<msg timestamp="20210927 02:33:24.194" level="ERROR">Error in resource file 'c:\qaninja\twp\resources\helpers.robot': Creating keyword ' Click Text' failed: Keyword with same name defined multiple times.</msg>
+<msg timestamp="20210927 02:33:24.195" level="ERROR">Error in resource file 'c:\qaninja\twp\resources\helpers.robot': Creating keyword ' Wait Until Page Contains' failed: Keyword with same name defined multiple times.</msg>
+<msg timestamp="20210927 02:33:24.196" level="ERROR">Error in resource file 'c:\qaninja\twp\resources\helpers.robot': Creating keyword ' Open Nav' failed: Keyword with same name defined multiple times.</msg>
+<msg timestamp="20210927 02:33:24.196" level="ERROR">Error in resource file 'c:\qaninja\twp\resources\helpers.robot': Creating keyword ' Click Text' failed: Keyword with same name defined multiple times.</msg>
+<msg timestamp="20210927 02:33:24.197" level="ERROR">Error in resource file 'c:\qaninja\twp\resources\helpers.robot': Creating keyword ' Wait Until Page Contains' failed: Keyword with same name defined multiple times.</msg>
+<msg timestamp="20210927 02:33:24.199" level="ERROR">Error in resource file 'c:\qaninja\twp\resources\helpers.robot': Creating keyword ' Click Text' failed: Keyword with same name defined multiple times.</msg>
+<msg timestamp="20210927 02:33:24.199" level="ERROR">Error in resource file 'c:\qaninja\twp\resources\helpers.robot': Creating keyword ' Wait Until Page Contains' failed: Keyword with same name defined multiple times.</msg>
 </errors>
 </robot>
