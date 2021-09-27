@@ -1,7 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<robot generator="Robot 4.1.1 (Python 3.9.7 on win32)" generated="20210926 02:10:20.052" rpa="false" schemaversion="2">
+<robot generator="Robot 4.1.1 (Python 3.9.7 on win32)" generated="20210926 22:23:26.799" rpa="false" schemaversion="2">
 <suite id="s1" name="Nav" source="c:\qaninja\twp\nav.robot">
 <test id="s1-t1" name="Deve acessar a tela Dialogs">
+<kw name="Open Session" type="SETUP">
+<kw name="Set Appium Timeout" library="AppiumLibrary">
+<arg>10</arg>
+<doc>Sets the timeout in seconds used by various keywords.</doc>
+<status status="PASS" starttime="20210926 22:23:33.392" endtime="20210926 22:23:33.392"/>
+</kw>
 <kw name="Open Application" library="AppiumLibrary">
 <arg>http://localhost:4723/wd/hub</arg>
 <arg>automationName=UiAutomator2</arg>
@@ -14,71 +20,359 @@ Please check https://github.com/appium/appium/blob/master/docs/en/writing-runnin
 | *Option*            | *Man.* | *Description*     |
 | remote_url          | Yes    | Appium server url |
 | alias               | no     | alias             |</doc>
-<status status="PASS" starttime="20210926 02:10:25.915" endtime="20210926 02:10:56.567"/>
+<status status="PASS" starttime="20210926 22:23:33.392" endtime="20210926 22:24:05.250"/>
 </kw>
+<status status="PASS" starttime="20210926 22:23:33.391" endtime="20210926 22:24:05.251"/>
+</kw>
+<kw name="Get Started">
 <kw name="Wait Until Page Contains" library="AppiumLibrary">
 <arg>COMEÇAR</arg>
-<arg>5</arg>
 <doc>Waits until `text` appears on current page.</doc>
-<status status="PASS" starttime="20210926 02:10:56.567" endtime="20210926 02:11:00.484"/>
+<status status="PASS" starttime="20210926 22:24:05.252" endtime="20210926 22:24:08.728"/>
 </kw>
 <kw name="Click Text" library="AppiumLibrary">
 <arg>COMEÇAR</arg>
 <doc>Click text identified by ``text``.</doc>
-<status status="PASS" starttime="20210926 02:11:00.484" endtime="20210926 02:11:01.126"/>
+<status status="PASS" starttime="20210926 22:24:08.728" endtime="20210926 22:24:09.335"/>
 </kw>
+<status status="PASS" starttime="20210926 22:24:05.251" endtime="20210926 22:24:09.336"/>
+</kw>
+<kw name="Open Nav">
 <kw name="Wait Until Element Is Visible" library="AppiumLibrary">
 <arg>xpath=//android.widget.ImageButton[@content-desc="Open navigation drawer"]</arg>
-<arg>5</arg>
 <doc>Waits until element specified with `locator` is visible.</doc>
-<status status="PASS" starttime="20210926 02:11:01.127" endtime="20210926 02:11:02.387"/>
+<status status="PASS" starttime="20210926 22:24:09.337" endtime="20210926 22:24:10.634"/>
 </kw>
 <kw name="Click Element" library="AppiumLibrary">
 <arg>xpath=//android.widget.ImageButton[@content-desc="Open navigation drawer"]</arg>
 <doc>Click element identified by `locator`.</doc>
-<msg timestamp="20210926 02:11:02.389" level="INFO">Clicking element 'xpath=//android.widget.ImageButton[@content-desc="Open navigation drawer"]'.</msg>
-<status status="PASS" starttime="20210926 02:11:02.387" endtime="20210926 02:11:02.490"/>
+<msg timestamp="20210926 22:24:10.636" level="INFO">Clicking element 'xpath=//android.widget.ImageButton[@content-desc="Open navigation drawer"]'.</msg>
+<status status="PASS" starttime="20210926 22:24:10.635" endtime="20210926 22:24:10.741"/>
 </kw>
 <kw name="Wait Until Element Is Visible" library="AppiumLibrary">
 <arg>id=io.qaninja.android.twp:id/navView</arg>
-<arg>5</arg>
 <doc>Waits until element specified with `locator` is visible.</doc>
-<status status="PASS" starttime="20210926 02:11:02.491" endtime="20210926 02:11:03.436"/>
+<status status="PASS" starttime="20210926 22:24:10.741" endtime="20210926 22:24:11.710"/>
+</kw>
+<status status="PASS" starttime="20210926 22:24:09.336" endtime="20210926 22:24:11.710"/>
 </kw>
 <kw name="Click Text" library="AppiumLibrary">
 <arg>DIALOGS</arg>
 <doc>Click text identified by ``text``.</doc>
-<status status="PASS" starttime="20210926 02:11:03.436" endtime="20210926 02:11:03.567"/>
+<status status="PASS" starttime="20210926 22:24:11.711" endtime="20210926 22:24:11.878"/>
 </kw>
 <kw name="Wait Until Element Is Visible" library="AppiumLibrary">
 <arg>id=io.qaninja.android.twp:id/toolbarTitle</arg>
-<arg>5</arg>
 <doc>Waits until element specified with `locator` is visible.</doc>
-<status status="PASS" starttime="20210926 02:11:03.568" endtime="20210926 02:11:04.494"/>
+<status status="PASS" starttime="20210926 22:24:11.879" endtime="20210926 22:24:12.822"/>
 </kw>
 <kw name="Element Text Should Be" library="AppiumLibrary">
 <arg>id=io.qaninja.android.twp:id/toolbarTitle</arg>
 <arg>DIALOGS</arg>
 <doc>Verifies element identified by ``locator`` exactly contains text ``expected``.</doc>
-<msg timestamp="20210926 02:11:04.496" level="INFO">Verifying element 'id=io.qaninja.android.twp:id/toolbarTitle' contains exactly text 'DIALOGS'.</msg>
-<status status="PASS" starttime="20210926 02:11:04.494" endtime="20210926 02:11:04.541"/>
+<msg timestamp="20210926 22:24:12.824" level="INFO">Verifying element 'id=io.qaninja.android.twp:id/toolbarTitle' contains exactly text 'DIALOGS'.</msg>
+<status status="PASS" starttime="20210926 22:24:12.823" endtime="20210926 22:24:12.875"/>
 </kw>
+<kw name="Close Session" type="TEARDOWN">
 <kw name="Close Application" library="AppiumLibrary">
 <doc>Closes the current application and also close webdriver session.</doc>
-<status status="PASS" starttime="20210926 02:11:04.542" endtime="20210926 02:11:05.664"/>
+<status status="PASS" starttime="20210926 22:24:12.876" endtime="20210926 22:24:13.755"/>
 </kw>
-<status status="PASS" starttime="20210926 02:10:25.914" endtime="20210926 02:11:05.665"/>
+<status status="PASS" starttime="20210926 22:24:12.876" endtime="20210926 22:24:13.755"/>
+</kw>
+<status status="PASS" starttime="20210926 22:23:33.391" endtime="20210926 22:24:13.756"/>
 </test>
-<status status="PASS" starttime="20210926 02:10:20.060" endtime="20210926 02:11:05.668"/>
+<test id="s1-t2" name="Deve acessar a tela de formulários">
+<kw name="Open Session" type="SETUP">
+<kw name="Set Appium Timeout" library="AppiumLibrary">
+<arg>10</arg>
+<doc>Sets the timeout in seconds used by various keywords.</doc>
+<status status="PASS" starttime="20210926 22:24:13.764" endtime="20210926 22:24:13.764"/>
+</kw>
+<kw name="Open Application" library="AppiumLibrary">
+<arg>http://localhost:4723/wd/hub</arg>
+<arg>automationName=UiAutomator2</arg>
+<arg>platformName=Android</arg>
+<arg>deviceName=Android Emulator</arg>
+<arg>app=${EXECDIR}/app/twp.apk</arg>
+<doc>Opens a new application to given Appium server.
+Capabilities of appium server, Android and iOS,
+Please check https://github.com/appium/appium/blob/master/docs/en/writing-running-appium/server-args.md
+| *Option*            | *Man.* | *Description*     |
+| remote_url          | Yes    | Appium server url |
+| alias               | no     | alias             |</doc>
+<status status="PASS" starttime="20210926 22:24:13.765" endtime="20210926 22:24:30.546"/>
+</kw>
+<status status="PASS" starttime="20210926 22:24:13.764" endtime="20210926 22:24:30.546"/>
+</kw>
+<kw name="Get Started">
+<kw name="Wait Until Page Contains" library="AppiumLibrary">
+<arg>COMEÇAR</arg>
+<doc>Waits until `text` appears on current page.</doc>
+<status status="PASS" starttime="20210926 22:24:30.548" endtime="20210926 22:24:34.899"/>
+</kw>
+<kw name="Click Text" library="AppiumLibrary">
+<arg>COMEÇAR</arg>
+<doc>Click text identified by ``text``.</doc>
+<status status="PASS" starttime="20210926 22:24:34.899" endtime="20210926 22:24:35.121"/>
+</kw>
+<status status="PASS" starttime="20210926 22:24:30.547" endtime="20210926 22:24:35.121"/>
+</kw>
+<kw name="Open Nav">
+<kw name="Wait Until Element Is Visible" library="AppiumLibrary">
+<arg>xpath=//android.widget.ImageButton[@content-desc="Open navigation drawer"]</arg>
+<doc>Waits until element specified with `locator` is visible.</doc>
+<status status="PASS" starttime="20210926 22:24:35.123" endtime="20210926 22:24:36.399"/>
+</kw>
+<kw name="Click Element" library="AppiumLibrary">
+<arg>xpath=//android.widget.ImageButton[@content-desc="Open navigation drawer"]</arg>
+<doc>Click element identified by `locator`.</doc>
+<msg timestamp="20210926 22:24:36.401" level="INFO">Clicking element 'xpath=//android.widget.ImageButton[@content-desc="Open navigation drawer"]'.</msg>
+<status status="PASS" starttime="20210926 22:24:36.399" endtime="20210926 22:24:36.529"/>
+</kw>
+<kw name="Wait Until Element Is Visible" library="AppiumLibrary">
+<arg>id=io.qaninja.android.twp:id/navView</arg>
+<doc>Waits until element specified with `locator` is visible.</doc>
+<status status="PASS" starttime="20210926 22:24:36.529" endtime="20210926 22:24:37.489"/>
+</kw>
+<status status="PASS" starttime="20210926 22:24:35.122" endtime="20210926 22:24:37.489"/>
+</kw>
+<kw name="Wait Until Element Is Visible" library="AppiumLibrary">
+<arg>xpath=//android.widget.ImageButton[@content-desc="Open navigation drawer"]</arg>
+<doc>Waits until element specified with `locator` is visible.</doc>
+<msg timestamp="20210926 22:24:51.357" level="INFO">&lt;?xml version='1.0' encoding='UTF-8' standalone='yes' ?&gt;
+&lt;hierarchy index="0" class="hierarchy" rotation="0" width="1080" height="1794"&gt;
+  &lt;android.widget.FrameLayout index="0" package="io.qaninja.android.twp" class="android.widget.FrameLayout" text="" checkable="false" checked="false" clickable="false" enabled="true" focusable="false" focused="false" long-clickable="false" password="false" scrollable="false" selected="false" bounds="[0,0][1080,1794]" displayed="true"&gt;
+    &lt;android.widget.LinearLayout index="0" package="io.qaninja.android.twp" class="android.widget.LinearLayout" text="" checkable="false" checked="false" clickable="false" enabled="true" focusable="false" focused="false" long-clickable="false" password="false" scrollable="false" selected="false" bounds="[0,0][1080,1794]" displayed="true"&gt;
+      &lt;android.widget.FrameLayout index="0" package="io.qaninja.android.twp" class="android.widget.FrameLayout" text="" checkable="false" checked="false" clickable="false" enabled="true" focusable="false" focused="false" long-clickable="false" password="false" scrollable="false" selected="false" bounds="[0,0][1080,1794]" displayed="true"&gt;
+        &lt;android.widget.LinearLayout index="0" package="io.qaninja.android.twp" class="android.widget.LinearLayout" text="" resource-id="io.qaninja.android.twp:id/action_bar_root" checkable="false" checked="false" clickable="false" enabled="true" focusable="false" focused="false" long-clickable="false" password="false" scrollable="false" selected="false" bounds="[0,0][1080,1794]" displayed="true"&gt;
+          &lt;android.widget.FrameLayout index="0" package="io.qaninja.android.twp" class="android.widget.FrameLayout" text="" resource-id="android:id/content" checkable="false" checked="false" clickable="false" enabled="true" focusable="false" focused="false" long-clickable="false" password="false" scrollable="false" selected="false" bounds="[0,0][1080,1794]" displayed="true"&gt;
+            &lt;androidx.drawerlayout.widget.DrawerLayout index="0" package="io.qaninja.android.twp" class="androidx.drawerlayout.widget.DrawerLayout" text="" resource-id="io.qaninja.android.twp:id/drawerLayout" checkable="false" checked="false" clickable="false" enabled="true" focusable="false" focused="false" long-clickable="false" password="false" scrollable="false" selected="false" bounds="[0,0][1080,1794]" displayed="true"&gt;
+              &lt;android.widget.FrameLayout index="0" package="io.qaninja.android.twp" class="android.widget.FrameLayout" text="" resource-id="io.qaninja.android.twp:id/navView" checkable="false" checked="false" clickable="false" enabled="true" focusable="false" focused="false" long-clickable="false" password="false" scrollable="false" selected="false" bounds="[0,0][735,1794]" displayed="true"&gt;
+                &lt;androidx.recyclerview.widget.RecyclerView index="0" package="io.qaninja.android.twp" class="androidx.recyclerview.widget.RecyclerView" text="" resource-id="io.qaninja.android.twp:id/rvNavigation" checkable="false" checked="false" clickable="false" enabled="true" focusable="true" focused="false" long-clickable="false" password="false" scrollable="true" selected="false" bounds="[0,0][735,1794]" displayed="true"&gt;
+                  &lt;android.view.ViewGroup index="0" package="io.qaninja.android.twp" class="android.view.ViewGroup" text="" checkable="false" checked="false" clickable="false" enabled="true" focusable="false" focused="false" long-clickable="false" password="false" scrollable="false" selected="false" bounds="[0,0][735,609]" displayed="true"&gt;
+                    &lt;android.widget.TextView index="0" package="io.qaninja.android.twp" class="android.widget.TextView" text="Training Wheels" resource-id="io.qaninja.android.twp:id/tvNavTitle" checkable="false" checked="false" clickable="false" enabled="true" focusable="false" focused="false" long-clickable="false" password="false" scrollable="false" selected="false" bounds="[42,84][735,175]" displayed="true" /&gt;
+                    &lt;android.widget.TextView index="1" package="io.qaninja.android.twp" class="android.widget.TextView" text="Mobile" resource-id="io.qaninja.android.twp:id/tvNavSubtitle" checkable="false" checked="false" clickable="false" enabled="true" focusable="false" focused="false" long-clickable="false" password="false" scrollable="false" selected="false" bounds="[42,196][735,253]" displayed="true" /&gt;
+                    &lt;android.widget.Button index="2" package="io.qaninja.android.twp" class="android.widget.Button" text="QA NINJA" resource-id="io.qaninja.android.twp:id/btnBuyNowNavigation" checkable="false" checked="false" clickable="true" enabled="true" focusable="true" focused="false" long-clickable="false" password="false" scrollable="false" selected="false" bounds="[42,347][362,494]" displayed="true" /&gt;
+                    &lt;android.widget.TextView index="3" package="io.qaninja.android.twp" class="android.widget.TextView" text="Cursos Online" resource-id="io.qaninja.android.twp:id/tvDocs" checkable="false" checked="false" clickable="true" enabled="true" focusable="true" focused="false" long-clickable="false" password="false" scrollable="false" selected="false" bounds="[404,347][601,494]" displayed="true" /&gt;
+                  &lt;/android.view.ViewGroup&gt;
+                  &lt;android.widget.FrameLayout index="1" package="io.qaninja.android.twp" class="android.widget.FrameLayout" text="" checkable="false" checked="false" clickable="true" enabled="true" focusable="true" focused="false" long-clickable="false" password="false" scrollable="false" selected="false" bounds="[0,609][735,819]" displayed="true"&gt;
+                    &lt;android.view.ViewGroup index="0" package="io.qaninja.android.twp" class="android.view.ViewGroup" text="" checkable="false" checked="false" clickable="false" enabled="true" focusable="false" focused="false" long-clickable="false" password="false" scrollable="false" selected="false" bounds="[7,619][728,809]" displayed="true"&gt;
+                      &lt;android.widget.ImageView index="0" package="io.qaninja.android.twp" class="android.widget.ImageView" text="" content-desc="Icon" resource-id="io.qaninja.android.twp:id/ivItemIcon" checkable="false" checked="false" clickable="false" enabled="true" focusable="false" focused="false" long-clickable="false" password="false" scrollable="false" selected="false" bounds="[49,672][133,756]" displayed="true" /&gt;
+                      &lt;android.widget.TextView index="1" package="io.qaninja.android.twp" class="android.widget.TextView" text="AVENGERS" resource-id="io.qaninja.android.twp:id/tvItemTitle" checkable="false" checked="false" clickable="false" enabled="true" focusable="false" focused="false" long-clickable="false" password="false" scrollable="false" selected="false" bounds="[175,689][686,740]" displayed="true" /&gt;
+                    &lt;/android.view.ViewGroup&gt;
+                  &lt;/android.widget.FrameLayout&gt;
+                  &lt;android.widget.FrameLayout index="2" package="io.qaninja.android.twp" class="android.widget.FrameLayout" text="" checkable="false" checked="false" clickable="true" enabled="true" focusable="true" focused="false" long-clickable="false" password="false" scrollable="false" selected="false" bounds="[0,819][735,1029]" displayed="true"&gt;
+                    &lt;android.view.ViewGroup index="0" package="io.qaninja.android.twp" class="android.view.ViewGroup" text="" checkable="false" checked="false" clickable="false" enabled="true" focusable="false" focused="false" long-clickable="false" password="false" scrollable="false" selected="false" bounds="[7,829][728,1019]" displayed="true"&gt;
+                      &lt;android.widget.ImageView index="0" package="io.qaninja.android.twp" class="android.widget.ImageView" text="" content-desc="Icon" resource-id="io.qaninja.android.twp:id/ivItemIcon" checkable="false" checked="false" clickable="false" enabled="true" focusable="false" focused="false" long-clickable="false" password="false" scrollable="false" selected="false" bounds="[49,882][133,966]" displayed="true" /&gt;
+                      &lt;android.widget.TextView index="1" package="io.qaninja.android.twp" class="android.widget.TextView" text="FORMS" resource-id="io.qaninja.android.twp:id/tvItemTitle" checkable="false" checked="false" clickable="false" enabled="true" focusable="false" focused="false" long-clickable="false" password="false" scrollable="false" selected="false" bounds="[175,899][686,950]" displayed="true" /&gt;
+                    &lt;/android.view.ViewGroup&gt;
+                  &lt;/android.widget.FrameLayout&gt;
+                  &lt;android.widget.FrameLayout index="3" package="io.qaninja.android.twp" class="android.widget.FrameLayout" text="" checkable="false" checked="false" clickable="true" enabled="true" focusable="true" focused="false" long-clickable="false" password="false" scrollable="false" selected="false" bounds="[0,1029][735,1239]" displayed="true"&gt;
+                    &lt;android.view.ViewGroup index="0" package="io.qaninja.android.twp" class="android.view.ViewGroup" text="" checkable="false" checked="false" clickable="false" enabled="true" focusable="false" focused="false" long-clickable="false" password="false" scrollable="false" selected="false" bounds="[7,1039][728,1229]" displayed="true"&gt;
+                      &lt;android.widget.ImageView index="0" package="io.qaninja.android.twp" class="android.widget.ImageView" text="" content-desc="Icon" resource-id="io.qaninja.android.twp:id/ivItemIcon" checkable="false" checked="false" clickable="false" enabled="true" focusable="false" focused="false" long-clickable="false" password="false" scrollable="false" selected="false" bounds="[49,1092][133,1176]" displayed="true" /&gt;
+                      &lt;android.widget.TextView index="1" package="io.qaninja.android.twp" class="android.widget.TextView" text="DIALOGS" resource-id="io.qaninja.android.twp:id/tvItemTitle" checkable="false" checked="false" clickable="false" enabled="true" focusable="false" focused="false" long-clickable="false" password="false" scrollable="false" selected="false" bounds="[175,1109][686,1160]" displayed="true" /&gt;
+                    &lt;/android.view.ViewGroup&gt;
+                  &lt;/android.widget.FrameLayout&gt;
+                  &lt;android.widget.FrameLayout index="4" package="io.qaninja.android.twp" class="android.widget.FrameLayout" text="" checkable="false" checked="false" clickable="true" enabled="true" focusable="true" focused="false" long-clickable="false" password="false" scrollable="false" selected="false" bounds="[0,1239][735,1449]" displayed="true"&gt;
+                    &lt;android.view.ViewGroup index="0" package="io.qaninja.android.twp" class="android.view.ViewGroup" text="" checkable="false" checked="false" clickable="false" enabled="true" focusable="false" focused="false" long-clickable="false" password="false" scrollable="false" selected="false" bounds="[7,1249][728,1439]" displayed="true"&gt;
+                      &lt;android.widget.ImageView index="0" package="io.qaninja.android.twp" class="android.widget.ImageView" text="" content-desc="Icon" resource-id="io.qaninja.android.twp:id/ivItemIcon" checkable="false" checked="false" clickable="false" enabled="true" focusable="false" focused="false" long-clickable="false" password="false" scrollable="false" selected="false" bounds="[49,1302][133,1386]" displayed="true" /&gt;
+                      &lt;android.widget.TextView index="1" package="io.qaninja.android.twp" class="android.widget.TextView" text="SEEK BAR" resource-id="io.qaninja.android.twp:id/tvItemTitle" checkable="false" checked="false" clickable="false" enabled="true" focusable="false" focused="false" long-clickable="false" password="false" scrollable="false" selected="false" bounds="[175,1319][686,1370]" displayed="true" /&gt;
+                    &lt;/android.view.ViewGroup&gt;
+                  &lt;/android.widget.FrameLayout&gt;
+                  &lt;android.widget.FrameLayout index="5" package="io.qaninja.android.twp" class="android.widget.FrameLayout" text="" checkable="false" checked="false" clickable="true" enabled="true" focusable="true" focused="false" long-clickable="false" password="false" scrollable="false" selected="false" bounds="[0,1449][735,1659]" displayed="true"&gt;
+                    &lt;android.view.ViewGroup index="0" package="io.qaninja.android.twp" class="android.view.ViewGroup" text="" checkable="false" checked="false" clickable="false" enabled="true" focusable="false" focused="false" long-clickable="false" password="false" scrollable="false" selected="false" bounds="[7,1459][728,1649]" displayed="true"&gt;
+                      &lt;android.widget.ImageView index="0" package="io.qaninja.android.twp" class="android.widget.ImageView" text="" content-desc="Icon" resource-id="io.qaninja.android.twp:id/ivItemIcon" checkable="false" checked="false" clickable="false" enabled="true" focusable="false" focused="false" long-clickable="false" password="false" scrollable="false" selected="false" bounds="[49,1512][133,1596]" displayed="true" /&gt;
+                      &lt;android.widget.TextView index="1" package="io.qaninja.android.twp" class="android.widget.TextView" text="INPUTS" resource-id="io.qaninja.android.twp:id/tvItemTitle" checkable="false" checked="false" clickable="false" enabled="true" focusable="false" focused="false" long-clickable="false" password="false" scrollable="false" selected="false" bounds="[175,1529][686,1580]" displayed="true" /&gt;
+                    &lt;/android.view.ViewGroup&gt;
+                  &lt;/android.widget.FrameLayout&gt;
+                  &lt;android.widget.FrameLayout index="6" package="io.qaninja.android.twp" class="android.widget.FrameLayout" text="" checkable="false" checked="false" clickable="true" enabled="true" focusable="true" focused="false" long-clickable="false" password="false" scrollable="false" selected="false" bounds="[0,1659][735,1794]" displayed="true"&gt;
+                    &lt;android.view.ViewGroup index="0" package="io.qaninja.android.twp" class="android.view.ViewGroup" text="" checkable="false" checked="false" clickable="false" enabled="true" focusable="false" focused="false" long-clickable="false" password="false" scrollable="false" selected="false" bounds="[7,1669][728,1794]" displayed="true"&gt;
+                      &lt;android.widget.ImageView index="0" package="io.qaninja.android.twp" class="android.widget.ImageView" text="" content-desc="Icon" resource-id="io.qaninja.android.twp:id/ivItemIcon" checkable="false" checked="false" clickable="false" enabled="true" focusable="false" focused="false" long-clickable="false" password="false" scrollable="false" selected="false" bounds="[49,1722][133,1794]" displayed="true" /&gt;
+                      &lt;android.widget.TextView index="1" package="io.qaninja.android.twp" class="android.widget.TextView" text="BOTÕES" resource-id="io.qaninja.android.twp:id/tvItemTitle" checkable="false" checked="false" clickable="false" enabled="true" focusable="false" focused="false" long-clickable="false" password="false" scrollable="false" selected="false" bounds="[175,1739][686,1790]" displayed="true" /&gt;
+                    &lt;/android.view.ViewGroup&gt;
+                  &lt;/android.widget.FrameLayout&gt;
+                &lt;/androidx.recyclerview.widget.RecyclerView&gt;
+                &lt;androidx.recyclerview.widget.RecyclerView index="1" package="io.qaninja.android.twp" class="androidx.recyclerview.widget.RecyclerView" text="" resource-id="io.qaninja.android.twp:id/design_navigation_view" checkable="false" checked="false" clickable="false" enabled="true" focusable="true" focused="false" long-clickable="false" password="false" scrollable="false" selected="false" bounds="[0,0][735,1794]" displayed="true"&gt;
+                  &lt;android.widget.LinearLayout index="0" package="io.qaninja.android.twp" class="android.widget.LinearLayout" text="" resource-id="io.qaninja.android.twp:id/navigation_header_container" checkable="false" checked="false" clickable="false" enabled="true" focusable="false" focused="false" long-clickable="false" password="false" scrollable="false" selected="false" bounds="[0,63][735,84]" displayed="true" /&gt;
+                &lt;/androidx.recyclerview.widget.RecyclerView&gt;
+              &lt;/android.widget.FrameLayout&gt;
+              &lt;android.view.ViewGroup index="1" package="io.qaninja.android.twp" class="android.view.ViewGroup" text="" checkable="false" checked="false" clickable="false" enabled="true" focusable="false" focused="false" long-clickable="false" password="false" scrollable="false" selected="false" bounds="[0,63][1080,1794]" displayed="true"&gt;
+                &lt;android.widget.LinearLayout index="0" package="io.qaninja.android.twp" class="android.widget.LinearLayout" text="" checkable="false" checked="false" clickable="false" enabled="true" focusable="false" focused="false" long-clickable="false" password="false" scrollable="false" selected="false" bounds="[0,63][1080,210]" displayed="true"&gt;
+                  &lt;android.view.ViewGroup index="0" package="io.qaninja.android.twp" class="android.view.ViewGroup" text="" resource-id="io.qaninja.android.twp:id/toolbar" checkable="false" checked="false" clickable="false" enabled="true" focusable="false" focused="false" long-clickable="false" password="false" scrollable="false" selected="false" bounds="[0,63][1080,210]" displayed="true"&gt;
+                    &lt;android.widget.ImageButton index="0" package="io.qaninja.android.twp" class="android.widget.ImageButton" text="" content-desc="Close navigation drawer" checkable="false" checked="false" clickable="true" enabled="true" focusable="true" focused="false" long-clickable="false" password="false" scrollable="false" selected="false" bounds="[0,63][147,210]" displayed="true" /&gt;
+                    &lt;android.view.ViewGroup index="1" package="io.qaninja.android.twp" class="android.view.ViewGroup" text="" checkable="false" checked="false" clickable="false" enabled="true" focusable="false" focused="false" long-clickable="false" password="false" scrollable="false" selected="false" bounds="[189,63][1080,210]" displayed="true"&gt;
+                      &lt;android.widget.TextView index="0" package="io.qaninja.android.twp" class="android.widget.TextView" text="AVENGERS" resource-id="io.qaninja.android.twp:id/toolbarTitle" checkable="false" checked="false" clickable="false" enabled="true" focusable="false" focused="false" long-clickable="false" password="false" scrollable="false" selected="false" bounds="[189,115][888,158]" displayed="true" /&gt;
+                      &lt;android.widget.Button index="1" package="io.qaninja.android.twp" class="android.widget.Button" text="QA NINJA" resource-id="io.qaninja.android.twp:id/btnBuyNowToolbar" checkable="false" checked="false" clickable="true" enabled="true" focusable="true" focused="false" long-clickable="false" password="false" scrollable="false" selected="false" bounds="[888,96][1059,177]" displayed="true" /&gt;
+                    &lt;/android.view.ViewGroup&gt;
+                  &lt;/android.view.ViewGroup&gt;
+                &lt;/android.widget.LinearLayout&gt;
+                &lt;android.view.ViewGroup index="1" package="io.qaninja.android.twp" class="android.view.ViewGroup" text="" checkable="false" checked="false" clickable="false" enabled="true" focusable="false" focused="false" long-clickable="false" password="false" scrollable="false" selected="false" bounds="[0,210][1080,1794]" displayed="true"&gt;
+                  &lt;android.widget.FrameLayout index="0" package="io.qaninja.android.twp" class="android.widget.FrameLayout" text="" resource-id="io.qaninja.android.twp:id/main_container" checkable="false" checked="false" clickable="false" enabled="true" focusable="false" focused="false" long-clickable="false" password="false" scrollable="false" selected="false" bounds="[0,210][1080,1794]" displayed="true"&gt;
+                    &lt;android.view.ViewGroup index="0" package="io.qaninja.android.twp" class="android.view.ViewGroup" text="" resource-id="io.qaninja.android.twp:id/swipeRefresh" checkable="false" checked="false" clickable="false" enabled="true" focusable="false" focused="false" long-clickable="false" password="false" scrollable="false" selected="false" bounds="[0,210][1080,1794]" displayed="true"&gt;
+                      &lt;androidx.recyclerview.widget.RecyclerView index="0" package="io.qaninja.android.twp" class="androidx.recyclerview.widget.RecyclerView" text="" resource-id="io.qaninja.android.twp:id/rvSubMenu" checkable="false" checked="false" clickable="false" enabled="true" focusable="true" focused="false" long-clickable="false" password="false" scrollable="false" selected="false" bounds="[0,210][1080,1794]" displayed="true"&gt;
+                        &lt;android.widget.FrameLayout index="0" package="io.qaninja.android.twp" class="android.widget.FrameLayout" text="" checkable="false" checked="false" clickable="true" enabled="true" focusable="true" focused="false" long-clickable="false" password="false" scrollable="false" selected="false" bounds="[21,231][1059,838]" displayed="true"&gt;
+                          &lt;android.widget.LinearLayout index="0" package="io.qaninja.android.twp" class="android.widget.LinearLayout" text="" checkable="false" checked="false" clickable="false" enabled="true" focusable="false" focused="false" long-clickable="false" password="false" scrollable="false" selected="false" bounds="[28,241][1052,828]" displayed="true"&gt;
+                            &lt;android.widget.FrameLayout index="0" package="io.qaninja.android.twp" class="android.widget.FrameLayout" text="" checkable="false" checked="false" clickable="false" enabled="true" focusable="false" focused="false" long-clickable="false" password="false" scrollable="false" selected="false" bounds="[28,241][1052,687]" displayed="true"&gt;
+                              &lt;android.widget.ImageView index="0" package="io.qaninja.android.twp" class="android.widget.ImageView" text="" content-desc="Icon" resource-id="io.qaninja.android.twp:id/ivItemIcon" checkable="false" checked="false" clickable="false" enabled="true" focusable="false" focused="false" long-clickable="false" password="false" scrollable="false" selected="false" bounds="[461,384][619,544]" displayed="true" /&gt;
+                            &lt;/android.widget.FrameLayout&gt;
+                            &lt;android.widget.TextView index="1" package="io.qaninja.android.twp" class="android.widget.TextView" text="LISTA" resource-id="io.qaninja.android.twp:id/tvItemTitle" checkable="false" checked="false" clickable="false" enabled="true" focusable="false" focused="false" long-clickable="false" password="false" scrollable="false" selected="false" bounds="[28,687][1052,828]" displayed="true" /&gt;
+                          &lt;/android.widget.LinearLayout&gt;
+                        &lt;/android.widget.FrameLayout&gt;
+                        &lt;android.widget.FrameLayout index="1" package="io.qaninja.android.twp" class="android.widget.FrameLayout" text="" checkable="false" checked="false" clickable="true" enabled="true" focusable="true" focused="false" long-clickable="false" password="false" scrollable="false" selected="false" bounds="[21,859][1059,1466]" displayed="true"&gt;
+                          &lt;android.widget.LinearLayout index="0" package="io.qaninja.android.twp" class="android.widget.LinearLayout" text="" checkable="false" checked="false" clickable="false" enabled="true" focusable="false" focused="false" long-clickable="false" password="false" scrollable="false" selected="false" bounds="[28,869][1052,1456]" displayed="true"&gt;
+                            &lt;android.widget.FrameLayout index="0" package="io.qaninja.android.twp" class="android.widget.FrameLayout" text="" checkable="false" checked="false" clickable="false" enabled="true" focusable="false" focused="false" long-clickable="false" password="false" scrollable="false" selected="false" bounds="[28,869][1052,1315]" displayed="true"&gt;
+                              &lt;android.widget.ImageView index="0" package="io.qaninja.android.twp" class="android.widget.ImageView" text="" content-desc="Icon" resource-id="io.qaninja.android.twp:id/ivItemIcon" checkable="false" checked="false" clickable="false" enabled="true" focusable="false" focused="false" long-clickable="false" password="false" scrollable="false" selected="false" bounds="[474,1035][605,1148]" displayed="true" /&gt;
+                            &lt;/android.widget.FrameLayout&gt;
+                            &lt;android.widget.TextView index="1" package="io.qaninja.android.twp" class="android.widget.TextView" text="BUSCA" resource-id="io.qaninja.android.twp:id/tvItemTitle" checkable="false" checked="false" clickable="false" enabled="true" focusable="false" focused="false" long-clickable="false" password="false" scrollable="false" selected="false" bounds="[28,1315][1052,1456]" displayed="true" /&gt;
+                          &lt;/android.widget.LinearLayout&gt;
+                        &lt;/android.widget.FrameLayout&gt;
+                      &lt;/androidx.recyclerview.widget.RecyclerView&gt;
+                    &lt;/android.view.ViewGroup&gt;
+                  &lt;/android.widget.FrameLayout&gt;
+                &lt;/android.view.ViewGroup&gt;
+              &lt;/android.view.ViewGroup&gt;
+            &lt;/androidx.drawerlayout.widget.DrawerLayout&gt;
+          &lt;/android.widget.FrameLayout&gt;
+        &lt;/android.widget.LinearLayout&gt;
+      &lt;/android.widget.FrameLayout&gt;
+    &lt;/android.widget.LinearLayout&gt;
+  &lt;/android.widget.FrameLayout&gt;
+&lt;/hierarchy&gt;</msg>
+<kw name="Capture Page Screenshot" library="AppiumLibrary">
+<doc>Takes a screenshot of the current page and embeds it into the log.</doc>
+<msg timestamp="20210926 22:24:51.729" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="appium-screenshot-1.png"&gt;&lt;img src="appium-screenshot-1.png" width="800px"&gt;&lt;/a&gt;</msg>
+<status status="PASS" starttime="20210926 22:24:51.357" endtime="20210926 22:24:51.729"/>
+</kw>
+<msg timestamp="20210926 22:24:51.730" level="FAIL">Element locator 'xpath=//android.widget.ImageButton[@content-desc="Open navigation drawer"]' did not match any elements after 10 seconds</msg>
+<status status="FAIL" starttime="20210926 22:24:37.490" endtime="20210926 22:24:51.731"/>
+</kw>
+<kw name="Click Element" library="AppiumLibrary">
+<arg>xpath=//android.widget.ImageButton[@content-desc="Open navigation drawer"]</arg>
+<doc>Click element identified by `locator`.</doc>
+<status status="NOT RUN" starttime="20210926 22:24:51.731" endtime="20210926 22:24:51.731"/>
+</kw>
+<kw name="Wait Until Element Is Visible" library="AppiumLibrary">
+<arg>id=io.qaninja.android.twp:id/navView</arg>
+<doc>Waits until element specified with `locator` is visible.</doc>
+<status status="NOT RUN" starttime="20210926 22:24:51.732" endtime="20210926 22:24:51.732"/>
+</kw>
+<kw name="Click Text" library="AppiumLibrary">
+<arg>FORMS</arg>
+<doc>Click text identified by ``text``.</doc>
+<status status="NOT RUN" starttime="20210926 22:24:51.732" endtime="20210926 22:24:51.733"/>
+</kw>
+<kw name="Wait Until Element Is Visible" library="AppiumLibrary">
+<arg>id=io.qaninja.android.twp:id/toolbarTitle</arg>
+<doc>Waits until element specified with `locator` is visible.</doc>
+<status status="NOT RUN" starttime="20210926 22:24:51.733" endtime="20210926 22:24:51.733"/>
+</kw>
+<kw name="Element Text Should Be" library="AppiumLibrary">
+<arg>id=io.qaninja.android.twp:id/toolbarTitle</arg>
+<arg>FORMS</arg>
+<doc>Verifies element identified by ``locator`` exactly contains text ``expected``.</doc>
+<status status="NOT RUN" starttime="20210926 22:24:51.733" endtime="20210926 22:24:51.734"/>
+</kw>
+<kw name="Close Session" type="TEARDOWN">
+<kw name="Close Application" library="AppiumLibrary">
+<doc>Closes the current application and also close webdriver session.</doc>
+<status status="PASS" starttime="20210926 22:24:51.734" endtime="20210926 22:24:52.996"/>
+</kw>
+<status status="PASS" starttime="20210926 22:24:51.734" endtime="20210926 22:24:52.997"/>
+</kw>
+<status status="FAIL" starttime="20210926 22:24:13.763" endtime="20210926 22:24:52.998">Element locator 'xpath=//android.widget.ImageButton[@content-desc="Open navigation drawer"]' did not match any elements after 10 seconds</status>
+</test>
+<test id="s1-t3" name="Deve acessar a tela de vingadores">
+<kw name="Open Session" type="SETUP">
+<kw name="Set Appium Timeout" library="AppiumLibrary">
+<arg>10</arg>
+<doc>Sets the timeout in seconds used by various keywords.</doc>
+<status status="PASS" starttime="20210926 22:24:53.002" endtime="20210926 22:24:53.002"/>
+</kw>
+<kw name="Open Application" library="AppiumLibrary">
+<arg>http://localhost:4723/wd/hub</arg>
+<arg>automationName=UiAutomator2</arg>
+<arg>platformName=Android</arg>
+<arg>deviceName=Android Emulator</arg>
+<arg>app=${EXECDIR}/app/twp.apk</arg>
+<doc>Opens a new application to given Appium server.
+Capabilities of appium server, Android and iOS,
+Please check https://github.com/appium/appium/blob/master/docs/en/writing-running-appium/server-args.md
+| *Option*            | *Man.* | *Description*     |
+| remote_url          | Yes    | Appium server url |
+| alias               | no     | alias             |</doc>
+<status status="PASS" starttime="20210926 22:24:53.002" endtime="20210926 22:25:10.408"/>
+</kw>
+<status status="PASS" starttime="20210926 22:24:53.001" endtime="20210926 22:25:10.409"/>
+</kw>
+<kw name="Get Started">
+<kw name="Wait Until Page Contains" library="AppiumLibrary">
+<arg>COMEÇAR</arg>
+<doc>Waits until `text` appears on current page.</doc>
+<status status="PASS" starttime="20210926 22:25:10.411" endtime="20210926 22:25:13.908"/>
+</kw>
+<kw name="Click Text" library="AppiumLibrary">
+<arg>COMEÇAR</arg>
+<doc>Click text identified by ``text``.</doc>
+<status status="PASS" starttime="20210926 22:25:13.909" endtime="20210926 22:25:14.130"/>
+</kw>
+<status status="PASS" starttime="20210926 22:25:10.410" endtime="20210926 22:25:14.130"/>
+</kw>
+<kw name="Open Nav">
+<kw name="Wait Until Element Is Visible" library="AppiumLibrary">
+<arg>xpath=//android.widget.ImageButton[@content-desc="Open navigation drawer"]</arg>
+<doc>Waits until element specified with `locator` is visible.</doc>
+<status status="PASS" starttime="20210926 22:25:14.131" endtime="20210926 22:25:15.407"/>
+</kw>
+<kw name="Click Element" library="AppiumLibrary">
+<arg>xpath=//android.widget.ImageButton[@content-desc="Open navigation drawer"]</arg>
+<doc>Click element identified by `locator`.</doc>
+<msg timestamp="20210926 22:25:15.409" level="INFO">Clicking element 'xpath=//android.widget.ImageButton[@content-desc="Open navigation drawer"]'.</msg>
+<status status="PASS" starttime="20210926 22:25:15.407" endtime="20210926 22:25:15.519"/>
+</kw>
+<kw name="Wait Until Element Is Visible" library="AppiumLibrary">
+<arg>id=io.qaninja.android.twp:id/navView</arg>
+<doc>Waits until element specified with `locator` is visible.</doc>
+<status status="PASS" starttime="20210926 22:25:15.519" endtime="20210926 22:25:16.482"/>
+</kw>
+<status status="PASS" starttime="20210926 22:25:14.131" endtime="20210926 22:25:16.482"/>
+</kw>
+<kw name="Click Text" library="AppiumLibrary">
+<arg>AVENGERS</arg>
+<doc>Click text identified by ``text``.</doc>
+<status status="PASS" starttime="20210926 22:25:16.482" endtime="20210926 22:25:16.651"/>
+</kw>
+<kw name="Wait Until Element Is Visible" library="AppiumLibrary">
+<arg>id=io.qaninja.android.twp:id/toolbarTitle</arg>
+<doc>Waits until element specified with `locator` is visible.</doc>
+<status status="PASS" starttime="20210926 22:25:16.652" endtime="20210926 22:25:17.585"/>
+</kw>
+<kw name="Element Text Should Be" library="AppiumLibrary">
+<arg>id=io.qaninja.android.twp:id/toolbarTitle</arg>
+<arg>AVENGERS</arg>
+<doc>Verifies element identified by ``locator`` exactly contains text ``expected``.</doc>
+<msg timestamp="20210926 22:25:17.588" level="INFO">Verifying element 'id=io.qaninja.android.twp:id/toolbarTitle' contains exactly text 'AVENGERS'.</msg>
+<status status="PASS" starttime="20210926 22:25:17.586" endtime="20210926 22:25:17.638"/>
+</kw>
+<kw name="Close Session" type="TEARDOWN">
+<kw name="Close Application" library="AppiumLibrary">
+<doc>Closes the current application and also close webdriver session.</doc>
+<status status="PASS" starttime="20210926 22:25:17.640" endtime="20210926 22:25:18.946"/>
+</kw>
+<status status="PASS" starttime="20210926 22:25:17.639" endtime="20210926 22:25:18.946"/>
+</kw>
+<status status="PASS" starttime="20210926 22:24:53.000" endtime="20210926 22:25:18.946"/>
+</test>
+<status status="FAIL" starttime="20210926 22:23:26.801" endtime="20210926 22:25:18.948"/>
 </suite>
 <statistics>
 <total>
-<stat pass="1" fail="0" skip="0">All Tests</stat>
+<stat pass="2" fail="1" skip="0">All Tests</stat>
 </total>
 <tag>
 </tag>
 <suite>
-<stat pass="1" fail="0" skip="0" id="s1" name="Nav">Nav</stat>
+<stat pass="2" fail="1" skip="0" id="s1" name="Nav">Nav</stat>
 </suite>
 </statistics>
 <errors>
